@@ -3,16 +3,22 @@ import { Navigation } from './components/Navigation';
 import { HeroHeadline } from './components/HeroHeadline';
 import { AboutPage } from './components/AboutPage';
 import { InfoModal } from './components/InfoModal';
+import { TimaraaStory } from './components/TimaraaStory';
+import { TimaraaStoryPage } from './components/TimaraaStoryPage';
 
 export default function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
+  if (window.location.pathname.replace(/\/+$/, '') === '/timaraastory') {
+    return <TimaraaStoryPage />;
+  }
+
   return (
-    <div className="relative min-h-screen lg:h-screen lg:max-h-screen bg-white text-[#080808] flex flex-col justify-between overflow-x-hidden selection:bg-[#080808] selection:text-white">
+    <div className="relative min-h-screen bg-white text-[#080808] flex flex-col overflow-x-hidden selection:bg-[#080808] selection:text-white">
 
       {/* Editorial Viewport Margins (Approx 20px - 32px padding) */}
-      <div className="w-full h-full flex flex-col justify-between p-4 sm:p-6 lg:p-8 xl:p-10 max-w-[1720px] mx-auto flex-1">
+      <div className="w-full min-h-screen flex flex-col justify-between p-4 sm:p-6 lg:p-8 xl:p-10 max-w-[1720px] mx-auto flex-1">
 
         {/* Top Navigation */}
         <Navigation
@@ -29,8 +35,9 @@ export default function App() {
           <HeroHeadline />
         </main>
 
-  
       </div>
+
+      <TimaraaStory />
 
       {/* Accessible Overlays / Pages */}
       <AboutPage

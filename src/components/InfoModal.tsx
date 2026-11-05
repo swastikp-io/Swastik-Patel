@@ -27,7 +27,7 @@ export const InfoModal = ({ isOpen, onClose }: InfoModalProps) => {
   const links = [
     {
       label: 'cv',
-      href: '/cv.pdf',
+      href: 'https://drive.google.com/file/d/1QqpcvjstFPm79bUq8IgaFUcWkIg71rRj/view?usp=sharing',
       ariaLabel: 'Download or view Curriculum Vitae',
       isExternal: true,
     },

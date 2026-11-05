@@ -76,7 +76,7 @@ export const AboutPage = ({ isOpen, onClose }: AboutPageProps) => {
                   What I actually do
                 </h2>
                 <p>
-                  My main gig is LinkedIn. I take what founders know (the stories, the lessons, the “I should really post about this someday”) and turn it into content people read, remember, and reply to. No “thrilled to announce.” No “humbled and honoured.” Just posts that sound like a real person wrote them, because one did.
+                  LinkedIn is my main gig. Founders usually know a lot more than they post, so I take the stories and lessons they’ve been meaning to share and turn them into posts that sound like them, not like a press release. Nobody’s thrilled to announce anything.
                 </p>
               </div>
 

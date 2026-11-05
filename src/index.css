@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+  }
+}

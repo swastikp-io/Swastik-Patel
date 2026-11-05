@@ -10,7 +10,7 @@ export default function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
-  if (window.location.pathname.replace(/\/+$/, '') === '/timaraastory') {
+  if (window.location.pathname.replace(/\/+$/, '') === '/socialmediaconcept') {
     return <TimaraaStoryPage />;
   }
 

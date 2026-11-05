@@ -7,7 +7,7 @@ export const TimaraaStory = () => {
     >
       <h5 className="m-0 max-w-[1100px] font-normal text-[clamp(2rem,5.2vw,2.5rem)] leading-[1.08] tracking-[-0.035em]">
         <a
-          href="/timaraastory"
+          href="/socialmediaconcept"
           className="text-white underline decoration-transparent underline-offset-[0.16em] transition-colors hover:decoration-white focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-white"
         >
           Read : TIMARAA Social Media Concept

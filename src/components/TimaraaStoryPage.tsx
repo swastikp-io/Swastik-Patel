@@ -116,12 +116,45 @@ export const TimaraaStoryPage = () => {
               Instead of designing one-off posts, I mapped three content pillars. Each gives the brand a repeatable format.
             </p>
             <figure className="mt-8">
-            <img
+              <img
                 src="/content-framework.png"
                 alt="Content Framework"
                 className="block h-auto w-full"
               />
             </figure>
+            <section aria-labelledby="sample-posts" className="mt-12">
+              <h3 id="sample-posts" className="mb-5 font-sans text-2xl font-normal leading-tight tracking-[-0.02em] text-[#080808] sm:text-3xl">
+                Sample posts: where each format fits
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[620px] border-collapse text-left text-[15px] leading-[1.55] sm:text-base">
+                  <thead>
+                    <tr>
+                      <th scope="col" className="border border-[#080808] px-4 py-3 font-semibold text-[#080808]">Pillar</th>
+                      <th scope="col" className="border border-[#080808] px-4 py-3 font-semibold text-[#080808]">Sample Post</th>
+                      <th scope="col" className="border border-[#080808] px-4 py-3 font-semibold text-[#080808]">Why it works</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" className="border border-[#080808] px-4 py-4 font-normal">Craft and Detail</th>
+                      <td className="border border-[#080808] px-4 py-4">Beige set collage: embroidery close-up with the full look as an inset</td>
+                      <td className="border border-[#080808] px-4 py-4">The viewer sees the craft first and the product second</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" className="border border-[#080808] px-4 py-4 font-normal">Brand Voice</th>
+                      <td className="border border-[#080808] px-4 py-4">Chat-bubble post: &quot;She wore TIMARAA.&quot;</td>
+                      <td className="border border-[#080808] px-4 py-4">A short exchange that positions the label as a mark of taste, and can become a recurring series</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" className="border border-[#080808] px-4 py-4 font-normal">Styling and Occasion (bonus)</th>
+                      <td className="border border-[#080808] px-4 py-4">Orange kaftan post, styled with denim</td>
+                      <td className="border border-[#080808] px-4 py-4">Shows the piece in detail and in an everyday-luxe context</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
           </section>
         </article>
       </main>

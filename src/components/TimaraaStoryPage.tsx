@@ -155,6 +155,28 @@ export const TimaraaStoryPage = () => {
                 </table>
               </div>
             </section>
+            <figure className="mt-8">
+              <img
+                src="/Timaraa (POST-01).png"
+                alt="Content Framework"
+                className="block h-auto w-full"
+              />
+            </figure>
+            <figure className="mt-8">
+              <img
+                src="/Timaraa (POST-02).png"
+                alt="Content Framework"
+                className="block h-auto w-full"
+              />
+            </figure>
+            <figure className="mt-8">
+              <img
+                src="/Timaraa (POST-03).png"
+                alt="Content Framework"
+                className="block h-auto w-full"
+              />
+            </figure>
+            
           </section>
         </article>
       </main>

@@ -1,54 +1,80 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { Navigation } from './components/Navigation';
 import { HeroHeadline } from './components/HeroHeadline';
 import { AboutPage } from './components/AboutPage';
 import { InfoModal } from './components/InfoModal';
 import { TimaraaStory } from './components/TimaraaStory';
 import { TimaraaStoryPage } from './components/TimaraaStoryPage';
+import { Preloader } from './components/Preloader';
 
 export default function App() {
+  const isStoryPage = window.location.pathname.replace(/\/+$/, '') === '/socialmediaconcept';
+  const [isLoading, setIsLoading] = useState(!isStoryPage);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const previousOverflow = useRef('');
 
-  if (window.location.pathname.replace(/\/+$/, '') === '/socialmediaconcept') {
-    return <TimaraaStoryPage />;
-  }
+  useEffect(() => {
+    if (isStoryPage) return;
+
+    previousOverflow.current = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const timeout = window.setTimeout(() => setIsLoading(false), 1700);
+
+    return () => {
+      window.clearTimeout(timeout);
+      document.body.style.overflow = previousOverflow.current;
+    };
+  }, [isStoryPage]);
+
+  const handlePreloaderExit = () => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = previousOverflow.current;
+  };
 
   return (
-    <div className="relative min-h-screen bg-white text-[#080808] flex flex-col overflow-x-hidden selection:bg-[#080808] selection:text-white">
+    <>
+      {isStoryPage ? (
+        <TimaraaStoryPage />
+      ) : (
+        <div className="relative min-h-screen bg-white text-[#080808] flex flex-col overflow-x-hidden selection:bg-[#080808] selection:text-white">
+          {/* Editorial Viewport Margins (Approx 20px - 32px padding) */}
+          <div className="w-full min-h-screen flex flex-col justify-between p-4 sm:p-6 lg:p-8 xl:p-10 max-w-[1720px] mx-auto flex-1">
+            {/* Top Navigation */}
+            <Navigation
+              onOpenAbout={() => setIsAboutOpen(true)}
+              onOpenInfo={() => setIsInfoOpen(true)}
+            />
 
-      {/* Editorial Viewport Margins (Approx 20px - 32px padding) */}
-      <div className="w-full min-h-screen flex flex-col justify-between p-4 sm:p-6 lg:p-8 xl:p-10 max-w-[1720px] mx-auto flex-1">
+            {/* Main Hero Section: Centered headline with generous editorial negative space */}
+            <main
+              role="main"
+              aria-label="Swastik Patel Creative Studio Hero"
+              className="relative flex-1 flex flex-col justify-center items-center my-auto py-8 sm:py-12 lg:py-16 z-10 w-full"
+            >
+              <HeroHeadline />
+            </main>
+          </div>
 
-        {/* Top Navigation */}
-        <Navigation
-          onOpenAbout={() => setIsAboutOpen(true)}
-          onOpenInfo={() => setIsInfoOpen(true)}
-        />
+          <TimaraaStory />
 
-        {/* Main Hero Section: Centered headline with generous editorial negative space */}
-        <main
-          role="main"
-          aria-label="Swastik Patel Creative Studio Hero"
-          className="relative flex-1 flex flex-col justify-center items-center my-auto py-8 sm:py-12 lg:py-16 z-10 w-full"
-        >
-          <HeroHeadline />
-        </main>
+          {/* Accessible Overlays / Pages */}
+          <AboutPage
+            isOpen={isAboutOpen}
+            onClose={() => setIsAboutOpen(false)}
+          />
 
-      </div>
+          <InfoModal
+            isOpen={isInfoOpen}
+            onClose={() => setIsInfoOpen(false)}
+          />
+        </div>
+      )}
 
-      <TimaraaStory />
-
-      {/* Accessible Overlays / Pages */}
-      <AboutPage
-        isOpen={isAboutOpen}
-        onClose={() => setIsAboutOpen(false)}
-      />
-
-      <InfoModal
-        isOpen={isInfoOpen}
-        onClose={() => setIsInfoOpen(false)}
-      />
-    </div>
+      <AnimatePresence onExitComplete={handlePreloaderExit}>
+        {!isStoryPage && isLoading && <Preloader key="preloader" />}
+      </AnimatePresence>
+    </>
   );
 }

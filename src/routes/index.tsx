@@ -1,12 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import craftDetail from "@/assets/timaraa-craft-detail.jpg";
 import brandVoice from "@/assets/timaraa-brand-voice.jpg";
 import stylingEditorial from "@/assets/timaraa-styling-editorial.jpg";
-import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/site-shell";
-import { MAILTO_CONTACT } from "@/lib/utils";
+import { MAILTO_CONTACT, NOTION_FORM_URL } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -76,7 +75,9 @@ function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <a
                 className="text-link text-primary hover:text-foreground font-semibold"
-                href={MAILTO_CONTACT}
+                href={NOTION_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 [Start a Conversation]
               </a>
@@ -179,32 +180,16 @@ function HomePage() {
             <p className="text-sm text-muted-foreground">
               The concept is not affiliated with or commissioned by Timaraa.
             </p>
-            <a className="text-link" href={MAILTO_CONTACT}>
+            <a
+              className="text-link"
+              href={NOTION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Want a feed with a point of view?{" "}
               <ArrowUpRight aria-hidden="true" className="size-4" />
             </a>
           </div>
-        </div>
-      </section>
-
-      <section className="home-contact">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-16 sm:px-8 sm:py-20 md:flex-row md:items-end md:justify-between">
-          <div>
-            <Eyebrow>Have a story sitting in your notes app?</Eyebrow>
-            <h2 className="contact-title mt-4 font-display">
-              Let’s get it out there.
-            </h2>
-          </div>
-          <Button
-            asChild
-            className="h-12 w-fit rounded-full px-6"
-            size="lg"
-            variant="secondary"
-          >
-            <a href={MAILTO_CONTACT}>
-              Email Swastik <ArrowUpRight aria-hidden="true" />
-            </a>
-          </Button>
         </div>
       </section>
     </main>

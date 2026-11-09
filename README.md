@@ -1,12 +1,29 @@
-# Swastik Patel
+# Welcome to your Lovable project
 
-## Deploy to Vercel
+This project was built with [Lovable](https://lovable.dev).
 
-Import this repository into Vercel and keep the project root set to the repository root. Vercel uses the settings in `vercel.json` to run `npm run build` and publish the generated `dist` directory. The checked-in `package-lock.json` keeps dependency installation reproducible.
+## Build with Lovable
 
-To validate a production build locally, run:
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-npm ci
-npm run build
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
 ```
+
+## Built with
+
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS

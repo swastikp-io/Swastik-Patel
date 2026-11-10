@@ -112,7 +112,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&display=swap",
         },
         { rel: "icon", href: "/favicon.png", type: "image/png" },
         { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
@@ -136,7 +136,10 @@ const structuredData = {
       description:
         "I make AI products sound like they were built for humans. Digital marketer in Lucknow, India, turning complex AI products into clear, well-designed content people actually read.",
       email: "dev.swastikpatel0305@gmail.com",
-      sameAs: ["https://www.linkedin.com/in/swastikpatel0305/"],
+      sameAs: [
+        "https://www.linkedin.com/in/swastik-patel-515b6138b/",
+        "https://x.com/_swastik0x",
+      ],
       knowsAbout: [
         "Marketing for AI Companies",
         "AI Product Storytelling",

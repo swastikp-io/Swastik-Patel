@@ -83,6 +83,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "author", content: "Swastik Patel" },
+        {
+          name: "robots",
+          content:
+            "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        },
+        {
+          name: "googlebot",
+          content:
+            "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        },
+        {
+          name: "bingbot",
+          content:
+            "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        },
       ],
       links: [
         {
@@ -100,6 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap",
         },
         { rel: "icon", href: "/favicon.png", type: "image/png" },
+        { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
       ],
     }),
     shellComponent: RootShell,
@@ -109,11 +125,54 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   },
 );
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://swastikpatel.com/#person",
+      name: "Swastik Patel",
+      jobTitle: "Content Marketer & Founder Storyteller",
+      description:
+        "I turn founders’ brain dumps into LinkedIn posts people actually read. Content marketer, storyteller, and performance marketer based in Lucknow, India.",
+      email: "dev.swastikpatel0305@gmail.com",
+      sameAs: ["https://www.linkedin.com/in/swastikpatel0305/"],
+      knowsAbout: [
+        "LinkedIn Content Marketing",
+        "Founder Storytelling",
+        "Social Media Management",
+        "Performance Marketing",
+        "Copywriting",
+        "Personal Branding",
+      ],
+      alumniOf: {
+        "@type": "EducationalOrganization",
+        name: "Shri Ramswaroop Memorial University",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://swastikpatel.com/#website",
+      url: "https://swastikpatel.com",
+      name: "Swastik Patel Portfolio",
+      description:
+        "Founder-led LinkedIn content, thoughtful social strategy, and stories worth reading.",
+      publisher: {
+        "@id": "https://swastikpatel.com/#person",
+      },
+    },
+  ],
+};
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body>
         {children}

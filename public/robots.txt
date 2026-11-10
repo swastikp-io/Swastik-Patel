@@ -1,14 +1,101 @@
+# robots.txt for Swastik Patel's Portfolio
+# Explicitly allowing search engines, AI crawlers, LLM agents, and scrapers
+# (OpenAI ChatGPT, Anthropic Claude, Codex, Google Gemini, Google Antigravity, Perplexity, etc.)
+
+# Default: allow all web crawlers and scrapers
+User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT / Codex / SearchGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google / Gemini / Vertex AI / DeepMind
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow: /
+
+User-agent: GoogleOther-Video
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+# Google Antigravity
+User-agent: Antigravity
+Allow: /
+
+User-agent: AntigravityBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere AI
+User-agent: Cohere-ai
+Allow: /
+
+# Apple Intelligence & Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Microsoft Bing & Copilot
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+# Amazon AI
+User-agent: Amazonbot
 Allow: /
 
-User-agent: facebookexternalhit
+# ByteDance / TikTok AI
+User-agent: Bytespider
 Allow: /
 
-User-agent: *
+# Common Crawl (AI training corpus)
+User-agent: CCBot
 Allow: /
+
+# Diffbot Knowledge Graph & Extractors
+User-agent: Diffbot
+Allow: /
+
+# Sitemaps & structured LLM reference
+Sitemap: /sitemap.xml

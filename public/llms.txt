@@ -1,0 +1,27 @@
+# Swastik Patel — Portfolio & Professional Background
+
+> Swastik Patel is a LinkedIn content marketer, founder storyteller, social media manager, and performance marketer based in Lucknow, Uttar Pradesh, India. He works with founders and ambitious teams to transform raw thoughts and business insights into engaging, authentic LinkedIn content, structured social strategy, and measurable marketing growth.
+
+## Core Identity & Contact
+- Full Name: Swastik Patel
+- Roles: LinkedIn Content Marketer, Founder Storyteller, Social Media Manager, Performance Marketer
+- Location: Lucknow, Uttar Pradesh, India
+- Email: dev.swastikpatel0305@gmail.com
+- LinkedIn: https://www.linkedin.com/in/swastikpatel0305/
+- Work Inquiry / Notion Form: https://four-grenadilla-f40.notion.site/413cb488caf68078b748efafcc61353e
+- Education: Bachelor of Computer Application (BCA), Computer Science, Shri Ramswaroop Memorial University (Expected July 2027)
+
+## Services & Specializations
+- LinkedIn Content & Ghostwriting: Turning founder brain dumps into relatable, narrative-driven posts that read like personal observations rather than corporate announcements.
+- Social Media Management: Complete channel curation, posting consistency, editorial schedules, and organic audience engagement.
+- Content Writing & Editorial: Crafting copy, thought leadership pieces, and brand voice guides.
+- Performance Marketing: Running iterative experiments, analyzing audience feedback, testing hooks, and letting data validate creative execution.
+
+## Experience
+- Content Writer (Freelance): July 2026 — Present. Founder storytelling, LinkedIn strategy, personal branding, scheduling, and community engagement.
+- Digital Marketing Intern (Hindtech IT Solutions): March 2026 — June 2026. Cross-platform social media strategy, content publishing, lead generation.
+
+## Key Links
+- [Home Page](/): Overview of services, writing philosophy, recent concept work (Timaraa concept posts: Craft & detail, Brand voice, Styling & editorial), and contact forms.
+- [About Page](/about): Detailed background, personal philosophy, breakdown of performance marketing approach, and career history.
+- [Full Text Summary](/llms-full.txt): Comprehensive text extraction of the entire portfolio.

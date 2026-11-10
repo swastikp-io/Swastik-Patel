@@ -15,11 +15,11 @@ export function GeometricMotif({ className = "" }: GeometricMotifProps) {
       aria-hidden="true"
     >
       {/* Top central spanning block */}
-      <rect x="0" y="0" width="16" height="12" fill="#F8F5F0" />
-      <rect x="24" y="0" width="24" height="12" fill="#F8F5F0" />
+      <rect x="0" y="0" width="16" height="12" fill="#FF1028" />
+      <rect x="24" y="0" width="24" height="12" fill="#111111" />
       {/* Bottom offset stepped blocks */}
-      <rect x="8" y="14" width="20" height="14" fill="#F8F5F0" />
-      <rect x="36" y="14" width="12" height="14" fill="#F8F5F0" />
+      <rect x="8" y="14" width="20" height="14" fill="#FF1028" />
+      <rect x="36" y="14" width="12" height="14" fill="#202020" stroke="#111111" />
     </svg>
   );
 }

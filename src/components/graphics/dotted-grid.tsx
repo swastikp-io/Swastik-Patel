@@ -13,7 +13,7 @@ export function DottedGrid({
   gap = 12,
   dotSize = 2.5,
   className = "",
-  dotColor = "currentColor",
+  dotColor = "#FF1028",
 }: DottedGridProps) {
   const width = (cols - 1) * gap + dotSize * 2;
   const height = (rows - 1) * gap + dotSize * 2;

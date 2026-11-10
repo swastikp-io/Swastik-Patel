@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 
 import { WireframeWave } from "@/components/graphics/wireframe-wave";
 import { SteppedFrame } from "@/components/graphics/stepped-frame";
@@ -31,20 +30,20 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <main className="w-full bg-[#151311] text-[#F8F5F0]">
+    <main className="w-full bg-[#111111] text-[#F2F0ED]">
       {/* Intro Header */}
-      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 pt-14 pb-12 sm:pt-20 sm:pb-16 border-b border-[#38322B]">
+      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 pt-14 pb-12 sm:pt-20 sm:pb-16 border-b border-[#262626]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-8">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#A59E96]">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#777777]">
               A BIT ABOUT THE PERSON WHO MAKES AI MAKE SENSE
             </p>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-[#F8F5F0] mt-6 tracking-tight">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-[#F2F0ED] mt-6 tracking-tight">
               Hey, it’s me.
               <br />
               Swastik.
             </h1>
-            <p className="font-sans text-lg sm:text-xl text-[#A59E96] mt-6 leading-relaxed max-w-2xl">
+            <p className="font-sans text-lg sm:text-xl text-[#777777] mt-6 leading-relaxed max-w-2xl">
               I’m a digital marketer who gets a little too excited about
               explaining complicated things simply, especially when the
               complicated thing is AI.
@@ -60,14 +59,14 @@ function AboutPage() {
       </section>
 
       {/* Main Copy Section */}
-      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20 border-b border-[#38322B]">
+      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20 border-b border-[#262626]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Side note */}
           <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#A59E96]">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#777777]">
               WHAT I BRING
             </p>
-            <p className="font-serif text-2xl text-[#F8F5F0] mt-4 leading-snug">
+            <p className="font-serif text-2xl text-[#F2F0ED] mt-4 leading-snug">
               Clear writing, good design instincts, and a healthy curiosity about
               the numbers.
             </p>
@@ -76,18 +75,18 @@ function AboutPage() {
           {/* Copy Blocks */}
           <div className="lg:col-span-8 space-y-12">
             {/* Why AI companies */}
-            <article className="border border-[#38322B] p-8 sm:p-10 bg-[#1A1715]">
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#F8F5F0]">
+            <article className="border border-[#262626] p-8 sm:p-10 bg-[#202020]">
+              <h2 className="font-serif text-3xl sm:text-4xl text-[#F2F0ED]">
                 Why AI companies
               </h2>
-              <p className="font-sans text-base text-[#A59E96] mt-5 leading-relaxed">
+              <p className="font-sans text-base text-[#777777] mt-5 leading-relaxed">
                 AI products are some of the most impressive things being built
                 right now, and some of the hardest to explain. Too many launch
                 posts read like a research paper wearing a blazer. Founders know
                 exactly what they’ve built, but the people who’d love it can’t
                 tell what it does or why it matters.
               </p>
-              <p className="font-sans text-base text-[#A59E96] mt-4 leading-relaxed">
+              <p className="font-sans text-base text-[#777777] mt-4 leading-relaxed">
                 That gap is what I like working on. I take what the team knows
                 and turn it into content people actually understand, remember,
                 and talk about.
@@ -95,40 +94,40 @@ function AboutPage() {
             </article>
 
             {/* What I actually do */}
-            <article className="border border-[#38322B] p-8 sm:p-10 bg-[#1A1715]">
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#F8F5F0]">
+            <article className="border border-[#262626] p-8 sm:p-10 bg-[#202020]">
+              <h2 className="font-serif text-3xl sm:text-4xl text-[#F2F0ED]">
                 What I actually do
               </h2>
-              <p className="font-sans text-base text-[#A59E96] mt-3">
+              <p className="font-sans text-base text-[#777777] mt-3">
                 Content is my main gig. For AI companies, that looks like:
               </p>
 
               <div className="mt-8 space-y-6">
-                <div className="border-l-2 border-[#F8F5F0] pl-5">
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F8F5F0] font-semibold">
+                <div className="border-l-2 border-[#FF1028] pl-5">
+                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F2F0ED] font-semibold">
                     LinkedIn content for founders and teams
                   </h3>
-                  <p className="font-sans text-sm text-[#A59E96] mt-1.5 leading-relaxed">
+                  <p className="font-sans text-sm text-[#777777] mt-1.5 leading-relaxed">
                     I turn what AI CEOs know into posts that sound like them, not
                     like a press release or a product changelog.
                   </p>
                 </div>
 
-                <div className="border-l-2 border-[#F8F5F0] pl-5">
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F8F5F0] font-semibold">
+                <div className="border-l-2 border-[#FF1028] pl-5">
+                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F2F0ED] font-semibold">
                     Content writing
                   </h3>
-                  <p className="font-sans text-sm text-[#A59E96] mt-1.5 leading-relaxed">
+                  <p className="font-sans text-sm text-[#777777] mt-1.5 leading-relaxed">
                     Posts, captions, launch copy, and explainers that say
                     something instead of filling space.
                   </p>
                 </div>
 
-                <div className="border-l-2 border-[#F8F5F0] pl-5">
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F8F5F0] font-semibold">
+                <div className="border-l-2 border-[#FF1028] pl-5">
+                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F2F0ED] font-semibold">
                     Social media management
                   </h3>
-                  <p className="font-sans text-sm text-[#A59E96] mt-1.5 leading-relaxed">
+                  <p className="font-sans text-sm text-[#777777] mt-1.5 leading-relaxed">
                     Your pages stay consistent, clear, and not weirdly silent for
                     three weeks after a launch.
                   </p>
@@ -137,33 +136,26 @@ function AboutPage() {
             </article>
 
             {/* Availability */}
-            <article className="bg-[#F8F5F0] text-[#151311] p-8 sm:p-10">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-[#5C554D]">
+            <article className="bg-[#F2F0ED] text-[#111111] p-8 sm:p-10 border border-[#F2F0ED]">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-[#777777] flex items-center gap-2">
+                <span className="size-2 rounded-full bg-[#FF1028]" />
                 CURRENTLY OPEN TO
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#151311] mt-3 leading-snug">
+              <h2 className="font-serif text-2xl sm:text-3xl text-[#111111] mt-3 leading-snug">
                 Marketing roles and internships at AI companies, and to working
                 with AI founders and teams on content.
               </h2>
-              <p className="font-sans text-sm text-[#5C554D] mt-4 leading-relaxed">
+              <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
                 Email me at{" "}
                 <a
                   href={MAILTO_CONTACT}
-                  className="text-[#151311] underline underline-offset-4 hover:opacity-70"
+                  className="text-[#111111] font-semibold underline underline-offset-4 hover:text-[#FF1028] transition-colors"
                 >
                   {CONTACT_EMAIL}
                 </a>{" "}
                 if you’d like to chat or you want to offer me a role in your
                 company.
               </p>
-              <div className="mt-6">
-                <a
-                  href={MAILTO_CONTACT}
-                  className="inline-flex items-center gap-2 bg-[#151311] text-[#F8F5F0] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3 hover:bg-[#2A2420] transition-colors"
-                >
-                  Say hello <ArrowUpRight className="size-3.5" />
-                </a>
-              </div>
             </article>
           </div>
         </div>
@@ -173,63 +165,63 @@ function AboutPage() {
       <section className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#A59E96]">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#777777]">
               ON PAPER
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#F8F5F0] mt-3">
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] mt-3">
               The experience.
             </h2>
           </div>
 
-          <div className="lg:col-span-8 divide-y divide-[#38322B] border-t border-b border-[#38322B]">
+          <div className="lg:col-span-8 divide-y divide-[#262626] border-t border-b border-[#262626]">
             <div className="py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div>
-                <h3 className="font-serif text-2xl text-[#F8F5F0]">
+                <h3 className="font-serif text-2xl text-[#F2F0ED]">
                   Content Writer
                 </h3>
-                <p className="font-mono text-xs text-[#A59E96] uppercase mt-1">
+                <p className="font-mono text-xs text-[#777777] uppercase mt-1">
                   Freelance
                 </p>
-                <p className="font-sans text-sm text-[#A59E96] mt-2 max-w-lg leading-relaxed">
+                <p className="font-sans text-sm text-[#777777] mt-2 max-w-lg leading-relaxed">
                   LinkedIn content strategy, founder storytelling, personal
                   branding, planning, and scheduling. Now focused on AI
                   companies.
                 </p>
               </div>
-              <span className="font-mono text-xs text-[#A59E96] uppercase shrink-0">
+              <span className="font-mono text-xs text-[#777777] uppercase shrink-0">
                 July 2026 — Present
               </span>
             </div>
 
             <div className="py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div>
-                <h3 className="font-serif text-2xl text-[#F8F5F0]">
+                <h3 className="font-serif text-2xl text-[#F2F0ED]">
                   Digital Marketing Intern
                 </h3>
-                <p className="font-mono text-xs text-[#A59E96] uppercase mt-1">
+                <p className="font-mono text-xs text-[#777777] uppercase mt-1">
                   Hindtech IT Solutions
                 </p>
-                <p className="font-sans text-sm text-[#A59E96] mt-2 max-w-lg leading-relaxed">
+                <p className="font-sans text-sm text-[#777777] mt-2 max-w-lg leading-relaxed">
                   Social media strategy and operations across platforms, content
                   planning, publishing, and lead generation.
                 </p>
               </div>
-              <span className="font-mono text-xs text-[#A59E96] uppercase shrink-0">
+              <span className="font-mono text-xs text-[#777777] uppercase shrink-0">
                 March 2026 — June 2026
               </span>
             </div>
 
             <div className="py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div>
-                <h3 className="font-serif text-2xl text-[#F8F5F0]">Education</h3>
-                <p className="font-mono text-xs text-[#A59E96] uppercase mt-1">
+                <h3 className="font-serif text-2xl text-[#F2F0ED]">Education</h3>
+                <p className="font-mono text-xs text-[#777777] uppercase mt-1">
                   Bachelor of Computer Application, Computer Science
                 </p>
-                <p className="font-sans text-sm text-[#A59E96] mt-2 max-w-lg leading-relaxed">
+                <p className="font-sans text-sm text-[#777777] mt-2 max-w-lg leading-relaxed">
                   Shri Ramswaroop Memorial University
                 </p>
               </div>
-              <span className="font-mono text-xs text-[#A59E96] uppercase shrink-0">
+              <span className="font-mono text-xs text-[#777777] uppercase shrink-0">
                 Expected July 2027
               </span>
             </div>

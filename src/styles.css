@@ -11,49 +11,60 @@
   --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Inverted Monochromatic Palette (Dark Editorial Canvas) */
-  --color-primary-bg: #151311;
-  --color-secondary-bg: #211D1A;
-  --color-text-primary: #F8F5F0;
-  --color-surface-dark: #211D1A;
-  --color-text-secondary: #A59E96;
-  --color-border-subtle: #38322B;
-  --color-accent-subtle: #2A2420;
+  /* Visual Palette */
+  --color-charcoal: #111111;
+  --color-graphite: #202020;
+  --color-signal-red: #FF1028;
+  --color-warm-white: #F2F0ED;
+  --color-blueprint-grey: #777777;
+  --color-fog: #F2F0ED;
+  --color-stone: #777777;
 
-  --color-background: #151311;
-  --color-foreground: #F8F5F0;
-  --color-card: #211D1A;
-  --color-card-foreground: #F8F5F0;
-  --color-border: #38322B;
-  --color-muted: #2A2420;
-  --color-muted-foreground: #A59E96;
-  --color-primary: #F8F5F0;
-  --color-primary-foreground: #151311;
-  --color-secondary: #211D1A;
-  --color-secondary-foreground: #F8F5F0;
+  --color-primary-bg: #111111;
+  --color-secondary-bg: #202020;
+  --color-text-primary: #F2F0ED;
+  --color-surface-dark: #202020;
+  --color-text-secondary: #777777;
+  --color-border-subtle: #262626;
+  --color-accent-subtle: #202020;
+  --color-accent: #FF1028;
+
+  --color-background: #111111;
+  --color-foreground: #F2F0ED;
+  --color-card: #202020;
+  --color-card-foreground: #F2F0ED;
+  --color-border: #262626;
+  --color-muted: #202020;
+  --color-muted-foreground: #777777;
+  --color-primary: #F2F0ED;
+  --color-primary-foreground: #111111;
+  --color-secondary: #202020;
+  --color-secondary-foreground: #F2F0ED;
 }
 
 :root {
-  --background: #151311;
-  --foreground: #F8F5F0;
-  --card: #211D1A;
-  --card-foreground: #F8F5F0;
-  --border: #38322B;
-  --muted: #2A2420;
-  --muted-foreground: #A59E96;
-  --primary: #F8F5F0;
-  --primary-foreground: #151311;
+  --background: #111111;
+  --foreground: #F2F0ED;
+  --card: #202020;
+  --card-foreground: #F2F0ED;
+  --border: #262626;
+  --muted: #202020;
+  --muted-foreground: #777777;
+  --primary: #F2F0ED;
+  --primary-foreground: #111111;
+  --accent: #FF1028;
+  --accent-foreground: #FFFFFF;
 }
 
 @layer base {
   * {
-    border-color: #38322B;
+    border-color: #262626;
     box-sizing: border-box;
   }
 
   body {
-    background-color: #151311;
-    color: #F8F5F0;
+    background-color: #111111;
+    color: #F2F0ED;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -62,12 +73,12 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #151311;
+    background-color: #111111;
   }
 
   ::selection {
-    background-color: #F8F5F0;
-    color: #151311;
+    background-color: #FF1028;
+    color: #FFFFFF;
   }
 }
 
@@ -86,20 +97,19 @@
 
 /* Fine border lines */
 .border-subtle {
-  border-color: #38322B;
+  border-color: #262626;
 }
 
 /* Architectural stepped shapes */
 .stepped-hero-shape {
-  clip-path: polygon(
-    0% 0%,
-    calc(100% - 0px) 0%,
-    100% calc(100% - 0px),
-    0% 100%
-  );
+  clip-path: polygon(0% 0%,
+      calc(100% - 0px) 0%,
+      100% calc(100% - 0px),
+      0% 100%);
 }
 
 /* Smooth link transitions */
-a, button {
+a,
+button {
   transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }

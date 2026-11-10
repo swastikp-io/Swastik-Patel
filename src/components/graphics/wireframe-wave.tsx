@@ -5,6 +5,8 @@ interface WireframeWaveProps {
   speed?: number;
   density?: number;
   interactive?: boolean;
+  lineColor?: string;
+  backgroundColor?: string;
 }
 
 interface Point3D {
@@ -18,6 +20,8 @@ export function WireframeWave({
   speed = 1,
   density = 1,
   interactive = true,
+  lineColor = "#FF1028",
+  backgroundColor = "#202020",
 }: WireframeWaveProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const mouseRef = useRef<{ x: number; y: number; targetX: number; targetY: number }>({
@@ -87,12 +91,18 @@ export function WireframeWave({
 
       time += prefersReducedMotion ? 0 : 0.007 * speed;
 
-      // Dark espresso surface background
-      ctx.fillStyle = "#1E1A17";
+      // Surface background
+      ctx.fillStyle = backgroundColor;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.save();
       ctx.scale(dpr, dpr);
+
+      // Color parsing helper for alpha transparency
+      const cleanHex = lineColor.replace("#", "");
+      const r = parseInt(cleanHex.slice(0, 2), 16) || 255;
+      const g = parseInt(cleanHex.slice(2, 4), 16) || 16;
+      const b = parseInt(cleanHex.slice(4, 6), 16) || 40;
 
       // 3D Parametric Wireframe Ribbon Wave
       // We calculate a 2D grid of 3D points [u, v]
@@ -192,7 +202,7 @@ export function WireframeWave({
           0.12,
           Math.min(0.55, baseAlpha + (1 - midDepth) * 0.25),
         );
-        ctx.strokeStyle = `rgba(240, 235, 228, ${depthAlpha.toFixed(3)})`;
+        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${depthAlpha.toFixed(3)})`;
         ctx.stroke();
       }
 
@@ -222,7 +232,7 @@ export function WireframeWave({
             0.08,
             Math.min(0.35, 0.2 + (1 - midDepth) * 0.15),
           );
-          ctx.strokeStyle = `rgba(235, 228, 218, ${depthAlpha.toFixed(3)})`;
+          ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${depthAlpha.toFixed(3)})`;
           ctx.stroke();
         }
       }
@@ -243,7 +253,7 @@ export function WireframeWave({
       }
       cancelAnimationFrame(animationFrameId);
     };
-  }, [speed, density, interactive]);
+  }, [speed, density, interactive, lineColor, backgroundColor]);
 
   return (
     <canvas

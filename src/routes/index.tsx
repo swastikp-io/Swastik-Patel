@@ -49,58 +49,48 @@ function HomePage() {
   const [selectedProject, setSelectedProject] = useState<"timaraa" | "ai" | null>(null);
 
   return (
-    <main className="w-full bg-[#151311] text-[#F8F5F0]">
+    <main className="w-full bg-[#111111] text-[#F2F0ED]">
       {/* SECTION 02 — Hero */}
       <section className="mx-auto max-w-[1240px] px-6 sm:px-10 pt-12 pb-14 sm:pt-16 sm:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.2em] text-[#F8F5F0]">
-              <span className="inline-block w-2 h-2 bg-[#F8F5F0]" />
-              <span>MARKETING FOR AI COMPANIES</span>
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="font-serif text-[3.2rem] sm:text-[4.4rem] lg:text-[5.4rem] leading-[0.93] tracking-tight text-[#F8F5F0] mt-6">
-              I make AI products
-              <br />
-              sound like they were
-              <br />
-              built for humans.
-            </h1>
-
-            {/* Supporting Copy */}
-            <p className="font-sans text-base sm:text-lg leading-relaxed text-[#A59E96] max-w-lg mt-6">
-              Founder storytelling, content strategy and distribution that turns
-              complex technology into something people understand.
-            </p>
-
-            {/* CTA Button */}
-            <div className="mt-8">
-              <a
-                href="#work"
-                className="inline-flex items-center gap-2 bg-[#F8F5F0] text-[#151311] hover:bg-[#E9DED2] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3 transition-colors"
-              >
-                VIEW WORK <ArrowUpRight className="size-3.5" />
-              </a>
-            </div>
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.2em] text-[#F2F0ED]">
+            <span className="inline-block w-2 h-2 bg-[#FF1028]" />
+            <span>MARKETING FOR AI COMPANIES</span>
           </div>
 
-          {/* Right Column: Large Stepped Wireframe Wave Graphic */}
-          <div className="lg:col-span-5 w-full">
-            <SteppedFrame variant="hero">
-              <WireframeWave density={1.1} speed={1} />
-            </SteppedFrame>
+          {/* Main Headline */}
+          <h1 className="font-serif text-[3.2rem] sm:text-[4.4rem] lg:text-[5.4rem] leading-[0.93] tracking-tight text-[#F2F0ED] mt-6">
+            I make AI products
+            <br />
+            sound like they were
+            <br />
+            built for humans.
+          </h1>
+
+          {/* Supporting Copy */}
+          <p className="font-sans text-base sm:text-lg leading-relaxed text-[#777777] max-w-lg mt-6">
+            Founder storytelling, content strategy and distribution that turns
+            complex technology into something people understand.
+          </p>
+
+          {/* CTA Button */}
+          <div className="mt-8">
+            <a
+              href="#work"
+              className="inline-flex items-center gap-2 bg-[#F2F0ED] text-[#111111] hover:bg-[#FF1028] hover:text-[#FFFFFF] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3 transition-colors"
+            >
+              VIEW WORK <ArrowUpRight className="size-3.5" />
+            </a>
           </div>
         </div>
       </section>
 
       {/* SECTION 03 — Information Bar */}
-      <section className="w-full border-y border-[#38322B] bg-[#151311]">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-10 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#F8F5F0]">
+      <section className="w-full border-y border-[#262626] bg-[#111111]">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-10 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#F2F0ED]">
           <div className="flex items-center gap-2.5">
-            <span className="size-1.5 rounded-full bg-[#F8F5F0]" />
+            <span className="size-1.5 rounded-full bg-[#FF1028] animate-pulse" />
             <span>INDEPENDENT MARKETER — INDIA</span>
           </div>
 
@@ -108,7 +98,7 @@ function HomePage() {
             href={NOTION_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[#A59E96] hover:text-[#F8F5F0] transition-colors"
+            className="flex items-center gap-1.5 text-[#777777] hover:text-[#F2F0ED] transition-colors"
           >
             <span>OPEN TO AI MARKETING OPPORTUNITIES</span>
             <ArrowUpRight className="size-3.5" />
@@ -118,29 +108,29 @@ function HomePage() {
 
       {/* SECTION 04 — Selected Work & Capability Grid */}
       <section id="work" className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20">
-        <div className="border border-[#38322B] bg-[#1A1715]">
+        <div className="border border-[#262626] bg-[#202020]">
           {/* ROW 1: Project 01 (Timaraa) + What I Do */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-[#38322B]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-[#262626]">
             {/* Project 01: Timaraa (7 cols) */}
-            <div className="lg:col-span-7 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-[#38322B] flex flex-col justify-between">
+            <div className="lg:col-span-7 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-[#262626] flex flex-col justify-between">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#A59E96]">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
                   FEATURED WORK / 01
                 </p>
 
                 <div className="mt-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   <div className="md:col-span-6">
-                    <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F8F5F0] tracking-tight">
+                    <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F2F0ED] tracking-tight">
                       Timaraa.
                     </h2>
-                    <p className="font-sans text-sm text-[#A59E96] mt-4 leading-relaxed">
+                    <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
                       A creative concept exploring storytelling, brand and
                       community around music and handcrafted couture.
                     </p>
 
                     <button
                       onClick={() => setSelectedProject("timaraa")}
-                      className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[#F8F5F0] hover:text-[#A59E96] transition-colors cursor-pointer"
+                      className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[#F2F0ED] hover:text-[#777777] transition-colors cursor-pointer"
                     >
                       VIEW PROJECT <ArrowUpRight className="size-3.5" />
                     </button>
@@ -158,65 +148,65 @@ function HomePage() {
             {/* What I Do (5 cols) */}
             <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#A59E96]">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
                   WHAT I DO
                 </p>
-                <h2 className="font-serif text-2xl sm:text-3xl text-[#F8F5F0] mt-3 leading-snug">
+                <h2 className="font-serif text-2xl sm:text-3xl text-[#F2F0ED] mt-3 leading-snug">
                   Marketing that makes complex products click.
                 </h2>
               </div>
 
-              <div className="mt-6 space-y-0 divide-y divide-[#38322B] border-t border-[#38322B]">
+              <div className="mt-6 space-y-0 divide-y divide-[#262626] border-t border-[#262626]">
                 {/* Capability 1 */}
                 <div className="py-3 flex items-center justify-between gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#28231F] flex items-center justify-center text-[#F8F5F0]">
+                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
                       <Layers className="size-3.5" />
                     </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F8F5F0]">
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
                       FOUNDER-LED CONTENT & STORYTELLING
                     </span>
                   </div>
-                  <ArrowUpRight className="size-3.5 text-[#A59E96] group-hover:text-[#F8F5F0] transition-colors" />
+                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
                 </div>
 
                 {/* Capability 2 */}
                 <div className="py-3 flex items-center justify-between gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#28231F] flex items-center justify-center text-[#F8F5F0]">
+                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
                       <BarChart3 className="size-3.5" />
                     </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F8F5F0]">
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
                       CONTENT STRATEGY & DISTRIBUTION
                     </span>
                   </div>
-                  <ArrowUpRight className="size-3.5 text-[#A59E96] group-hover:text-[#F8F5F0] transition-colors" />
+                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
                 </div>
 
                 {/* Capability 3 */}
                 <div className="py-3 flex items-center justify-between gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#28231F] flex items-center justify-center text-[#F8F5F0]">
+                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
                       <Compass className="size-3.5" />
                     </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F8F5F0]">
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
                       PRODUCT POSITIONING & MESSAGING
                     </span>
                   </div>
-                  <ArrowUpRight className="size-3.5 text-[#A59E96] group-hover:text-[#F8F5F0] transition-colors" />
+                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
                 </div>
 
                 {/* Capability 4 */}
                 <div className="py-3 flex items-center justify-between gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#28231F] flex items-center justify-center text-[#F8F5F0]">
+                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
                       <Users className="size-3.5" />
                     </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F8F5F0]">
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
                       SOCIAL MEDIA & ORGANIC GROWTH
                     </span>
                   </div>
-                  <ArrowUpRight className="size-3.5 text-[#A59E96] group-hover:text-[#F8F5F0] transition-colors" />
+                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
                 </div>
               </div>
             </div>
@@ -225,20 +215,20 @@ function HomePage() {
           {/* ROW 2: Project 02 (Content for AI builders) + Statistics (80+) */}
           <div className="grid grid-cols-1 lg:grid-cols-12">
             {/* Project 02 (7 cols) */}
-            <div className="lg:col-span-7 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-[#38322B] flex flex-col justify-between">
+            <div className="lg:col-span-7 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-[#262626] flex flex-col justify-between">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#A59E96]">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
                   SELECTED WORK / 02
                 </p>
 
                 <div className="mt-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   <div className="md:col-span-6">
-                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F8F5F0] tracking-tight">
+                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2F0ED] tracking-tight">
                       Content for
                       <br />
                       AI builders.
                     </h2>
-                    <p className="font-sans text-sm text-[#A59E96] mt-4 leading-relaxed">
+                    <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
                       A content system and distribution approach for early-stage
                       AI products, translating code and research into customer
                       attention.
@@ -246,7 +236,7 @@ function HomePage() {
 
                     <button
                       onClick={() => setSelectedProject("ai")}
-                      className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[#F8F5F0] hover:text-[#A59E96] transition-colors cursor-pointer"
+                      className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[#F2F0ED] hover:text-[#777777] transition-colors cursor-pointer"
                     >
                       CASE STUDY <ArrowUpRight className="size-3.5" />
                     </button>
@@ -265,21 +255,21 @@ function HomePage() {
             <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between relative">
               {/* Dotted Matrix top right */}
               <div className="absolute top-8 right-8 hidden sm:block">
-                <DottedGrid rows={6} cols={9} gap={10} dotColor="#38322B" />
+                <DottedGrid rows={6} cols={9} gap={10} dotColor="#202020" />
               </div>
 
               <div>
-                <span className="font-serif text-6xl sm:text-7xl lg:text-8xl leading-none text-[#F8F5F0] block">
+                <span className="font-serif text-6xl sm:text-7xl lg:text-8xl leading-none text-[#F2F0ED] block">
                   80+
                 </span>
-                <p className="font-sans text-sm text-[#A59E96] mt-4 max-w-xs leading-relaxed">
+                <p className="font-sans text-sm text-[#777777] mt-4 max-w-xs leading-relaxed">
                   Pieces of content shipped across projects, experiments and
                   personal brands.
                 </p>
               </div>
 
-              <div className="mt-10 border-t border-[#38322B] pt-4">
-                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#A59E96]">
+              <div className="mt-10 border-t border-[#262626] pt-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#777777]">
                   STRATEGY. CONTENT. SYSTEMS.
                 </p>
               </div>
@@ -290,15 +280,15 @@ function HomePage() {
 
       {/* SECTION 05 — My Approach */}
       <section id="approach" className="mx-auto max-w-[1240px] px-6 sm:px-10 pb-16 sm:pb-20">
-        <div className="border border-[#38322B] p-6 sm:p-10 bg-[#1A1715]">
+        <div className="border border-[#262626] p-6 sm:p-10 bg-[#202020]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left Column: Heading + Geometric Motif */}
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#A59E96]">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
                   MY APPROACH
                 </p>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F8F5F0] mt-3 leading-tight max-w-sm">
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2F0ED] mt-3 leading-tight max-w-sm">
                   From understanding to distribution.
                 </h2>
               </div>
@@ -309,17 +299,17 @@ function HomePage() {
             </div>
 
             {/* Right Column: 4 Stages */}
-            <div className="lg:col-span-7 divide-y divide-[#38322B] border-t lg:border-t-0 border-[#38322B]">
+            <div className="lg:col-span-7 divide-y divide-[#262626] border-t lg:border-t-0 border-[#262626]">
               {/* Stage 01 */}
               <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F8F5F0] w-12 shrink-0">
+                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
                   01
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F8F5F0]">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
                     Understand
                   </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#A59E96] mt-1">
+                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
                     RESEARCH THE PRODUCT, AUDIENCE AND MARKET.
                   </p>
                 </div>
@@ -327,14 +317,14 @@ function HomePage() {
 
               {/* Stage 02 */}
               <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F8F5F0] w-12 shrink-0">
+                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
                   02
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F8F5F0]">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
                     Position
                   </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#A59E96] mt-1">
+                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
                     TURN TECHNICAL COMPLEXITY INTO CLEAR, COMPELLING MESSAGING.
                   </p>
                 </div>
@@ -342,14 +332,14 @@ function HomePage() {
 
               {/* Stage 03 */}
               <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F8F5F0] w-12 shrink-0">
+                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
                   03
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F8F5F0]">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
                     Create
                   </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#A59E96] mt-1">
+                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
                     DEVELOP CONTENT THAT SOUNDS HUMAN, NOT JUST TECHNICAL.
                   </p>
                 </div>
@@ -357,14 +347,14 @@ function HomePage() {
 
               {/* Stage 04 */}
               <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F8F5F0] w-12 shrink-0">
+                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
                   04
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F8F5F0]">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
                     Distribute
                   </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#A59E96] mt-1">
+                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
                     BUILD CONSISTENT, COMPOUNDING VISIBILITY ACROSS THE RIGHT
                     CHANNELS.
                   </p>
@@ -379,46 +369,46 @@ function HomePage() {
       <section id="about" className="mx-auto max-w-[1240px] px-6 sm:px-10 pb-20 sm:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left: About Card (Inverted Ivory Panel) */}
-          <div className="lg:col-span-5 bg-[#F8F5F0] text-[#151311] p-8 sm:p-10 flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-[#F2F0ED] text-[#111111] p-8 sm:p-10 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 border border-[#151311]/40 text-[#151311]">
+                <span className="font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 border border-[#111111]/40 text-[#111111]">
                   ABOUT
                 </span>
                 <a
                   href="/about"
-                  className="text-[#151311] hover:opacity-60 transition-opacity"
+                  className="text-[#111111] hover:opacity-60 transition-opacity"
                   aria-label="Read full about page"
                 >
                   <ArrowUpRight className="size-4" />
                 </a>
               </div>
 
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#151311] mt-8 leading-snug">
+              <h2 className="font-serif text-2xl sm:text-3xl text-[#111111] mt-8 leading-snug">
                 Curious about technology, interested in how people understand
                 it.
               </h2>
 
-              <p className="font-sans text-sm text-[#5C554D] mt-5 leading-relaxed">
+              <p className="font-sans text-sm text-[#777777] mt-5 leading-relaxed">
                 An independent marketer exploring the intersection of content,
                 technology and AI. Based in India, working with ambitious teams
                 building the future.
               </p>
             </div>
 
-            <div className="mt-10 flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-widest text-[#151311]">
-              <span className="inline-block w-2 h-2 bg-[#151311]" />
+            <div className="mt-10 flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-widest text-[#111111]">
+              <span className="inline-block w-2 h-2 bg-[#FF1028]" />
               <span>OPEN TO AI MARKETING OPPORTUNITIES</span>
             </div>
           </div>
 
           {/* Right: Closing Contact Section */}
-          <div className="lg:col-span-7 border border-[#38322B] bg-[#1A1715] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-7 border border-[#262626] bg-[#202020] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-[#A59E96]">
+              <p className="font-mono text-[11px] uppercase tracking-widest text-[#777777]">
                 HAVE AN AI PRODUCT THAT'S HARD TO EXPLAIN?
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F8F5F0] mt-4 leading-tight max-w-md">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2F0ED] mt-4 leading-tight max-w-md">
                 Let’s make people understand why it matters.
               </h2>
 
@@ -427,7 +417,7 @@ function HomePage() {
                   href={NOTION_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#F8F5F0] text-[#151311] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3.5 hover:bg-[#E9DED2] transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#F2F0ED] text-[#111111] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3.5 hover:bg-[#FF1028] hover:text-[#FFFFFF] transition-colors"
                 >
                   START A CONVERSATION <ArrowUpRight className="size-3.5" />
                 </a>
@@ -449,10 +439,10 @@ function HomePage() {
       {/* Project Modal: Preserves full visual case study samples */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto">
-          <div className="relative w-full max-w-3xl bg-[#1A1715] border border-[#38322B] text-[#F8F5F0] p-6 sm:p-10 max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-3xl bg-[#202020] border border-[#262626] text-[#F2F0ED] p-6 sm:p-10 max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-6 right-6 p-2 text-[#F8F5F0] hover:text-[#A59E96] transition-colors"
+              className="absolute top-6 right-6 p-2 text-[#F2F0ED] hover:text-[#777777] transition-colors"
               aria-label="Close modal"
             >
               <X className="size-5" />
@@ -460,13 +450,13 @@ function HomePage() {
 
             {selectedProject === "timaraa" ? (
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#A59E96]">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
                   FEATURED WORK / 01
                 </p>
-                <h2 className="font-serif text-4xl text-[#F8F5F0] mt-2">
+                <h2 className="font-serif text-4xl text-[#F2F0ED] mt-2">
                   Timaraa — Social Editorial Concept
                 </h2>
-                <p className="font-sans text-sm text-[#A59E96] mt-4 leading-relaxed">
+                <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
                   A self-initiated social-media editorial direction for
                   Timaraa, a handcrafted luxury label. Built around three
                   repeatable pillars: craft & detail, brand voice, and styling &
@@ -474,33 +464,33 @@ function HomePage() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                  <div className="border border-[#38322B] p-2 bg-[#211D1A]">
+                  <div className="border border-[#262626] p-2 bg-[#202020]">
                     <img
                       src={craftDetail}
                       alt="Craft and detail close-up"
                       className="w-full aspect-[4/5] object-cover"
                     />
-                    <p className="font-mono text-[10px] uppercase mt-2 text-[#A59E96]">
+                    <p className="font-mono text-[10px] uppercase mt-2 text-[#777777]">
                       01 · Craft & Detail
                     </p>
                   </div>
-                  <div className="border border-[#38322B] p-2 bg-[#211D1A]">
+                  <div className="border border-[#262626] p-2 bg-[#202020]">
                     <img
                       src={brandVoice}
                       alt="Brand voice conversational post"
                       className="w-full aspect-[4/5] object-cover"
                     />
-                    <p className="font-mono text-[10px] uppercase mt-2 text-[#A59E96]">
+                    <p className="font-mono text-[10px] uppercase mt-2 text-[#777777]">
                       02 · Brand Voice
                     </p>
                   </div>
-                  <div className="border border-[#38322B] p-2 bg-[#211D1A]">
+                  <div className="border border-[#262626] p-2 bg-[#202020]">
                     <img
                       src={stylingEditorial}
                       alt="Styling and occasion editorial"
                       className="w-full aspect-[4/5] object-cover"
                     />
-                    <p className="font-mono text-[10px] uppercase mt-2 text-[#A59E96]">
+                    <p className="font-mono text-[10px] uppercase mt-2 text-[#777777]">
                       03 · Styling & Occasion
                     </p>
                   </div>
@@ -511,7 +501,7 @@ function HomePage() {
                     href={NOTION_FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-[#F8F5F0] text-[#151311] font-mono text-xs font-semibold uppercase px-4 py-2 hover:bg-[#E9DED2]"
+                    className="inline-flex items-center gap-1.5 bg-[#F2F0ED] text-[#111111] font-mono text-xs font-semibold uppercase px-4 py-2 hover:bg-[#FF1028] hover:text-[#FFFFFF]"
                   >
                     Start a project <ArrowUpRight className="size-3.5" />
                   </a>
@@ -519,30 +509,30 @@ function HomePage() {
               </div>
             ) : (
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#A59E96]">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
                   SELECTED WORK / 02
                 </p>
-                <h2 className="font-serif text-4xl text-[#F8F5F0] mt-2">
+                <h2 className="font-serif text-4xl text-[#F2F0ED] mt-2">
                   Content for AI Builders
                 </h2>
-                <p className="font-sans text-sm text-[#A59E96] mt-4 leading-relaxed">
+                <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
                   A framework for early-stage AI founders to extract their
                   internal technical notes, pull requests, and product
                   architectures, turning them into high-signal LinkedIn
                   storytelling and launch content.
                 </p>
 
-                <div className="border border-[#38322B] p-6 mt-6 bg-[#211D1A] space-y-4 font-mono text-xs text-[#F8F5F0]">
+                <div className="border border-[#262626] p-6 mt-6 bg-[#202020] space-y-4 font-mono text-xs text-[#F2F0ED]">
                   <div>
-                    <span className="text-[#A59E96]">STAGE 01:</span> Extraction
+                    <span className="text-[#777777]">STAGE 01:</span> Extraction
                     session (founder brain dumps into structured audio).
                   </div>
                   <div>
-                    <span className="text-[#A59E96]">STAGE 02:</span> Translation
+                    <span className="text-[#777777]">STAGE 02:</span> Translation
                     (research jargon decoded into human problems & outcomes).
                   </div>
                   <div>
-                    <span className="text-[#A59E96]">STAGE 03:</span> Multi-channel
+                    <span className="text-[#777777]">STAGE 03:</span> Multi-channel
                     distribution across LinkedIn, founder accounts, and developer
                     communities.
                   </div>
@@ -551,7 +541,7 @@ function HomePage() {
                 <div className="mt-8 flex justify-end">
                   <a
                     href={MAILTO_CONTACT}
-                    className="inline-flex items-center gap-1.5 bg-[#F8F5F0] text-[#151311] font-mono text-xs font-semibold uppercase px-4 py-2 hover:bg-[#E9DED2]"
+                    className="inline-flex items-center gap-1.5 bg-[#F2F0ED] text-[#111111] font-mono text-xs font-semibold uppercase px-4 py-2 hover:bg-[#FF1028] hover:text-[#FFFFFF]"
                   >
                     Discuss this approach <ArrowUpRight className="size-3.5" />
                   </a>

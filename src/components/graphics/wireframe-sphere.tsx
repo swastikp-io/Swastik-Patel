@@ -3,11 +3,15 @@ import { useEffect, useRef } from "react";
 interface WireframeSphereProps {
   className?: string;
   speed?: number;
+  lineColor?: string;
+  backgroundColor?: string;
 }
 
 export function WireframeSphere({
   className = "",
   speed = 1,
+  lineColor = "#FF1028",
+  backgroundColor = "#202020",
 }: WireframeSphereProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -54,8 +58,8 @@ export function WireframeSphere({
 
       angleY += prefersReducedMotion ? 0 : 0.0035 * speed;
 
-      // Dark espresso surface background
-      ctx.fillStyle = "#1E1A17";
+      // Surface background
+      ctx.fillStyle = backgroundColor;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.save();
@@ -66,6 +70,12 @@ export function WireframeSphere({
       const radius = Math.min(width, height) * 0.42;
 
       ctx.lineWidth = 0.7;
+
+      // Color parsing helper for alpha transparency
+      const cleanHex = lineColor.replace("#", "");
+      const r = parseInt(cleanHex.slice(0, 2), 16) || 255;
+      const g = parseInt(cleanHex.slice(2, 4), 16) || 16;
+      const b = parseInt(cleanHex.slice(4, 6), 16) || 40;
 
       // 3D rotation helper
       const project = (x: number, y: number, z: number) => {
@@ -94,7 +104,7 @@ export function WireframeSphere({
       // 1. Draw outer boundary silhouette ring
       ctx.beginPath();
       ctx.arc(cx, cy, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = "rgba(240, 235, 228, 0.4)";
+      ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.50)`;
       ctx.stroke();
 
       // 2. Latitude Circles (28 parallel rings)
@@ -115,7 +125,7 @@ export function WireframeSphere({
           if (s === 0) ctx.moveTo(pt.px, pt.py);
           else ctx.lineTo(pt.px, pt.py);
         }
-        ctx.strokeStyle = "rgba(235, 228, 218, 0.22)";
+        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.25)`;
         ctx.stroke();
       }
 
@@ -136,11 +146,11 @@ export function WireframeSphere({
           if (s === 0) ctx.moveTo(pt.px, pt.py);
           else ctx.lineTo(pt.px, pt.py);
         }
-        ctx.strokeStyle = "rgba(240, 235, 228, 0.28)";
+        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.32)`;
         ctx.stroke();
       }
 
-      // 4. Fine Computational Geodesic Spirals (creates the dense organic wireframe texture from reference)
+      // 4. Fine Computational Geodesic Spirals
       const spiralCount = 6;
       for (let sp = 0; sp < spiralCount; sp++) {
         const offset = (sp / spiralCount) * Math.PI * 2;
@@ -159,7 +169,7 @@ export function WireframeSphere({
           if (s === 0) ctx.moveTo(pt.px, pt.py);
           else ctx.lineTo(pt.px, pt.py);
         }
-        ctx.strokeStyle = "rgba(245, 240, 235, 0.38)";
+        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.42)`;
         ctx.stroke();
       }
 
@@ -176,7 +186,7 @@ export function WireframeSphere({
       resizeObserver.disconnect();
       cancelAnimationFrame(animationFrameId);
     };
-  }, [speed]);
+  }, [speed, lineColor, backgroundColor]);
 
   return (
     <canvas

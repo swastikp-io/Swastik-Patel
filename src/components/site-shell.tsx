@@ -10,28 +10,28 @@ import {
 
 export function SiteShell() {
   return (
-    <div className="min-h-screen bg-[#151311] text-[#F8F5F0] flex flex-col selection:bg-[#F8F5F0] selection:text-[#151311]">
+    <div className="min-h-screen bg-[#111111] text-[#F2F0ED] flex flex-col selection:bg-[#FF1028] selection:text-[#FFFFFF]">
       {/* SECTION 01 — Navigation */}
-      <header className="sticky top-0 z-40 w-full bg-[#151311]/95 backdrop-blur-sm border-b border-[#38322B]">
+      <header className="sticky top-0 z-40 w-full bg-[#111111]/95 backdrop-blur-sm border-b border-[#262626]">
         <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 sm:px-10">
           <Link
             to="/"
-            className="font-serif text-2xl tracking-tight text-[#F8F5F0] hover:opacity-80 transition-opacity"
+            className="font-serif text-2xl tracking-tight text-[#F2F0ED] hover:text-[#FF1028] transition-colors"
           >
             Swastik Patel
           </Link>
 
           <nav
             aria-label="Primary navigation"
-            className="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-[#A59E96]"
+            className="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-[#777777]"
           >
-            <a href="/#work" className="hover:text-[#F8F5F0] transition-colors">
+            <a href="/#work" className="hover:text-[#F2F0ED] transition-colors">
               WORK
             </a>
-            <a href="/#approach" className="hover:text-[#F8F5F0] transition-colors">
+            <a href="/#approach" className="hover:text-[#F2F0ED] transition-colors">
               APPROACH
             </a>
-            <Link to="/about" className="hover:text-[#F8F5F0] transition-colors">
+            <Link to="/about" className="hover:text-[#F2F0ED] transition-colors">
               ABOUT
             </Link>
           </nav>
@@ -40,7 +40,7 @@ export function SiteShell() {
             href={NOTION_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 bg-[#F8F5F0] text-[#151311] font-mono text-[11px] font-semibold uppercase tracking-wider px-4 py-2 hover:bg-[#E9DED2] transition-colors"
+            className="inline-flex items-center gap-1.5 bg-[#F2F0ED] text-[#111111] font-mono text-[11px] font-semibold uppercase tracking-wider px-4 py-2 hover:bg-[#FF1028] hover:text-[#FFFFFF] transition-colors"
           >
             LET'S TALK <ArrowUpRight aria-hidden="true" className="size-3.5" />
           </a>
@@ -53,8 +53,8 @@ export function SiteShell() {
       </div>
 
       {/* SECTION 10 — Footer */}
-      <footer className="w-full border-t border-[#38322B] bg-[#151311]">
-        <div className="mx-auto flex max-w-[1240px] flex-col sm:flex-row items-center justify-between gap-6 px-6 py-8 sm:px-10 font-mono text-[11px] uppercase tracking-wider text-[#A59E96]">
+      <footer className="w-full border-t border-[#262626] bg-[#111111]">
+        <div className="mx-auto flex max-w-[1240px] flex-col sm:flex-row items-center justify-between gap-6 px-6 py-8 sm:px-10 font-mono text-[11px] uppercase tracking-wider text-[#777777]">
           <span>© {new Date().getFullYear()} SWASTIK PATEL</span>
 
           <nav
@@ -65,7 +65,7 @@ export function SiteShell() {
               href={X_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F8F5F0] transition-colors"
+              className="hover:text-[#F2F0ED] transition-colors"
             >
               X (Twitter)
             </a>
@@ -73,7 +73,7 @@ export function SiteShell() {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F8F5F0] transition-colors"
+              className="hover:text-[#F2F0ED] transition-colors"
             >
               LinkedIn
             </a>
@@ -86,7 +86,7 @@ export function SiteShell() {
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <p className="font-mono text-[11px] font-medium tracking-[0.2em] text-[#A59E96] uppercase">
+    <p className="font-mono text-[11px] font-medium tracking-[0.2em] text-[#777777] uppercase">
       {children}
     </p>
   );

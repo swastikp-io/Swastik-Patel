@@ -132,18 +132,18 @@ const structuredData = {
       "@type": "Person",
       "@id": "https://swastikpatel.com/#person",
       name: "Swastik Patel",
-      jobTitle: "Content Marketer & Founder Storyteller",
+      jobTitle: "Marketing for AI Companies & Founder Storyteller",
       description:
-        "I turn founders’ brain dumps into LinkedIn posts people actually read. Content marketer, storyteller, and performance marketer based in Lucknow, India.",
+        "I make AI products sound like they were built for humans. Digital marketer in Lucknow, India, turning complex AI products into clear, well-designed content people actually read.",
       email: "dev.swastikpatel0305@gmail.com",
       sameAs: ["https://www.linkedin.com/in/swastikpatel0305/"],
       knowsAbout: [
-        "LinkedIn Content Marketing",
-        "Founder Storytelling",
+        "Marketing for AI Companies",
+        "AI Product Storytelling",
+        "Founder-Led Content",
+        "LinkedIn Content Strategy",
         "Social Media Management",
-        "Performance Marketing",
-        "Copywriting",
-        "Personal Branding",
+        "Content Writing",
       ],
       alumniOf: {
         "@type": "EducationalOrganization",
@@ -154,9 +154,9 @@ const structuredData = {
       "@type": "WebSite",
       "@id": "https://swastikpatel.com/#website",
       url: "https://swastikpatel.com",
-      name: "Swastik Patel Portfolio",
+      name: "Swastik Patel — Marketing for AI Companies",
       description:
-        "Founder-led LinkedIn content, thoughtful social strategy, and stories worth reading.",
+        "Marketing for AI companies, founder-led content, and stories worth reading.",
       publisher: {
         "@id": "https://swastikpatel.com/#person",
       },

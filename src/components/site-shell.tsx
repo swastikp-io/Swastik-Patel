@@ -92,16 +92,16 @@ export function SiteShell() {
         <section className="w-full bg-[#5189FD] text-[#040507]">
           <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#040507]/80 sm:text-sm">
-              HAVE A STORY SITTING IN YOUR NOTES APP?
+              BUILDING SOMETHING IN AI THAT’S HARD TO EXPLAIN?
             </p>
             <a
               href={MAILTO_CONTACT}
               className="group mt-5 inline-block text-left transition-opacity hover:opacity-90"
             >
               <h2 className="font-display text-5xl leading-[0.92] tracking-tight sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-                Let’s get it out
+                Let’s fix
                 <br />
-                there.
+                that.
               </h2>
             </a>
           </div>
@@ -121,7 +121,7 @@ export function SiteShell() {
                     Swastik Patel
                   </Link>
                   <p className="mt-1 text-sm text-neutral-400">
-                    Building, creating and marketing ideas from India.
+                    Marketing for AI companies, from India.
                   </p>
                 </div>
                 <div
@@ -206,7 +206,7 @@ export function SiteShell() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#5189FD] opacity-75" />
                   <span className="relative inline-flex size-2 rounded-full bg-[#5189FD]" />
                 </span>
-                <span>AVAILABLE FOR NEW PROJECTS</span>
+                <span>OPEN TO MARKETING ROLES AT AI COMPANIES</span>
               </div>
             </div>
           </div>

@@ -1,55 +1,79 @@
-# Swastik Patel — Complete Website Content & Portfolio Summary
+# Swastik Patel — Complete Website Content & AI Marketing Portfolio
 
 ## Profile Overview
 - Name: Swastik Patel
-- Title: Content Marketer & Founder Storyteller
+- Title: Marketing for AI Companies · Founder Storyteller
 - Location: Lucknow, India
 - Email: dev.swastikpatel0305@gmail.com
 - LinkedIn: https://www.linkedin.com/in/swastikpatel0305/
 - Work with Me Form: https://four-grenadilla-f40.notion.site/413cb488caf68078b748efafcc61353e
+- Availability: Open to marketing roles and internships at AI companies, and working with AI founders and teams on content.
 - Education: Bachelor of Computer Application (BCA), Computer Science, Shri Ramswaroop Memorial University (Expected graduation July 2027)
 
 ---
 
 ## Page: Home (/)
-Headline:
-"I turn founders’ brain dumps into LinkedIn posts people actually read."
+Title: Swastik Patel — Marketing for AI Companies
 
-Subdeck:
-"Founder-led LinkedIn content, thoughtful social strategy, and stories worth reading."
+Hero Headline:
+"I make AI products sound like they were built for humans."
+
+Closing CTA:
+"BUILDING SOMETHING IN AI THAT’S HARD TO EXPLAIN? Let’s fix that."
+
+Footer Tagline:
+"Marketing for AI companies, from India."
+
+Status:
+"OPEN TO MARKETING ROLES AT AI COMPANIES"
 
 Work Concept Case Study — Timaraa:
 - Overview: A concept social-media editorial created for Timaraa, a handcrafted Indian fashion label. Demonstrates how visual styling, brand voice, and micro-storytelling come together. (Note: Self-initiated concept work, not a commissioned client engagement).
 - Sample 01 — Craft & detail: Let the embroidery lead. A close-up, with the full look as its inset.
 - Sample 02 — Brand voice: A small, repeatable conversation built around the label’s point of view.
-- Sample 03 — Styling & editorial: How to wear it, how it moves, and why it belongs in your wardrobe.
-
-Call to Action:
-- "Have a project or want to collaborate?"
-- Email: dev.swastikpatel0305@gmail.com
-- Form: https://four-grenadilla-f40.notion.site/413cb488caf68078b748efafcc61353e
+- Sample 03 — Styling & occasion: A hero detail and an everyday styling idea, in one editorial frame.
 
 ---
 
 ## Page: About (/about)
+Title: About Swastik Patel — Marketing for AI Companies
+Meta Description: "Meet Swastik Patel, a digital marketer in Lucknow, India, turning complex AI products into clear, well-designed content people actually read."
+OG Description: "The marketer who makes AI make sense."
+
+Eyebrow:
+"A bit about the person who makes AI make sense"
+
 Headline:
 "Hey, it’s me. Swastik."
-"I’m the person behind the LinkedIn posts you didn’t realise you were enjoying."
 
-What Swastik Actually Does:
-LinkedIn is his primary specialty. Founders typically hold immense industry insight and operational lessons but lack the time or inclination to write. Swastik captures these lessons and shapes them into personal, compelling stories that sound like genuine reflections rather than generic press releases or AI-generated platitudes.
+Intro Deck:
+"I’m a digital marketer who gets a little too excited about explaining complicated things simply, especially when the complicated thing is AI."
 
-Side Quests:
-- Social Media Management: Keeping brand pages consistent, lively, and strategically aligned.
-- Content Writing: Writing posts, captions, newsletters, and copy that communicate substance and value.
+What I Bring:
+"Clear writing, good design instincts, and a healthy curiosity about the numbers."
 
-Performance Marketing Philosophy:
-Performance marketing is finding out what audiences genuinely respond to, and scaling what works. Every ad or creative test serves as an empirical feedback loop where customers vote with attention and clicks. Combining creative storytelling with analytical rigor ensures creative intuition is kept honest by real performance data.
+Why AI Companies:
+"AI products are some of the most impressive things being built right now, and some of the hardest to explain. Too many launch posts read like a research paper wearing a blazer. Founders know exactly what they’ve built, but the people who’d love it can’t tell what it does or why it matters.
 
-Professional History:
-1. Content Writer — Freelance (July 2026 — Present)
-   - LinkedIn content strategy, founder storytelling, personal branding, editorial planning, scheduling.
-2. Digital Marketing Intern — Hindtech IT Solutions (March 2026 — June 2026)
-   - Social media strategy and cross-platform operations, content planning, publishing, and lead generation.
-3. Education — Shri Ramswaroop Memorial University (Expected July 2027)
-   - Bachelor of Computer Application, Computer Science.
+That gap is what I like working on. I take what the team knows and turn it into content people actually understand, remember, and talk about."
+
+What I Actually Do:
+"Content is my main gig. For AI companies, that looks like:
+- LinkedIn content for founders and teams: I turn what AI CEOs know into posts that sound like them, not like a press release or a product changelog.
+- Content writing: Posts, captions, launch copy, and explainers that say something instead of filling space.
+- Social media management: Your pages stay consistent, clear, and not weirdly silent for three weeks after a launch."
+
+Availability:
+"Marketing roles and internships at AI companies, and to working with AI founders and teams on content.
+Email me at dev.swastikpatel0305@gmail.com if you’d like to chat or you want to offer me a role in your company. [Say hello]"
+
+Professional Experience:
+1. Content Writer · Freelance (July 2026 — Present)
+   LinkedIn content strategy, founder storytelling, personal branding, planning, and scheduling. Now focused on AI companies.
+2. Digital Marketing Intern · Hindtech IT Solutions (March 2026 — June 2026)
+   Social media strategy and operations across platforms, content planning, publishing, and lead generation.
+3. Education · Shri Ramswaroop Memorial University (Expected July 2027)
+   Bachelor of Computer Application, Computer Science.
+
+Closing CTA:
+"BUILDING SOMETHING IN AI THAT’S HARD TO EXPLAIN? Let’s fix that."

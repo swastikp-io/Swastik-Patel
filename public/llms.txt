@@ -1,27 +1,27 @@
-# Swastik Patel — Portfolio & Professional Background
+# Swastik Patel — Marketing for AI Companies
 
-> Swastik Patel is a LinkedIn content marketer, founder storyteller, social media manager, and performance marketer based in Lucknow, Uttar Pradesh, India. He works with founders and ambitious teams to transform raw thoughts and business insights into engaging, authentic LinkedIn content, structured social strategy, and measurable marketing growth.
+> Swastik Patel is a digital marketer in Lucknow, India, turning complex AI products into clear, well-designed content people actually read. He specializes in marketing for AI companies, founder-led LinkedIn storytelling, launch copywriting, and social media management.
 
 ## Core Identity & Contact
 - Full Name: Swastik Patel
-- Roles: LinkedIn Content Marketer, Founder Storyteller, Social Media Manager, Performance Marketer
+- Roles: Marketer for AI Companies, Founder Storyteller, Content Writer, Social Media Manager
 - Location: Lucknow, Uttar Pradesh, India
 - Email: dev.swastikpatel0305@gmail.com
 - LinkedIn: https://www.linkedin.com/in/swastikpatel0305/
 - Work Inquiry / Notion Form: https://four-grenadilla-f40.notion.site/413cb488caf68078b748efafcc61353e
 - Education: Bachelor of Computer Application (BCA), Computer Science, Shri Ramswaroop Memorial University (Expected July 2027)
+- Current Availability: Open to marketing roles and internships at AI companies, and partnering with AI founders and teams on content.
 
-## Services & Specializations
-- LinkedIn Content & Ghostwriting: Turning founder brain dumps into relatable, narrative-driven posts that read like personal observations rather than corporate announcements.
-- Social Media Management: Complete channel curation, posting consistency, editorial schedules, and organic audience engagement.
-- Content Writing & Editorial: Crafting copy, thought leadership pieces, and brand voice guides.
-- Performance Marketing: Running iterative experiments, analyzing audience feedback, testing hooks, and letting data validate creative execution.
+## What He Does for AI Companies
+- **LinkedIn Content for Founders and Teams**: Turning what AI CEOs know into posts that sound like them, not like a press release or a product changelog.
+- **Content Writing**: Posts, captions, launch copy, and explainers that say something instead of filling space.
+- **Social Media Management**: Ensuring company pages stay consistent, clear, and active (not silent for weeks following a launch).
 
-## Experience
-- Content Writer (Freelance): July 2026 — Present. Founder storytelling, LinkedIn strategy, personal branding, scheduling, and community engagement.
-- Digital Marketing Intern (Hindtech IT Solutions): March 2026 — June 2026. Cross-platform social media strategy, content publishing, lead generation.
+## Professional Experience
+- **Content Writer (Freelance)**: July 2026 — Present. LinkedIn content strategy, founder storytelling, personal branding, planning, and scheduling. Now focused on AI companies.
+- **Digital Marketing Intern (Hindtech IT Solutions)**: March 2026 — June 2026. Social media strategy and operations across platforms, content planning, publishing, and lead generation.
 
 ## Key Links
-- [Home Page](/): Overview of services, writing philosophy, recent concept work (Timaraa concept posts: Craft & detail, Brand voice, Styling & editorial), and contact forms.
-- [About Page](/about): Detailed background, personal philosophy, breakdown of performance marketing approach, and career history.
-- [Full Text Summary](/llms-full.txt): Comprehensive text extraction of the entire portfolio.
+- [Home Page](/): Hero: "I make AI products sound like they were built for humans." Work concept examples, and contact links.
+- [About Page](/about): Background story ("A bit about the person who makes AI make sense"), why AI companies, what he actually does, and career experience.
+- [Full Text Summary](/llms-full.txt): Comprehensive plain-text version for AI crawlers.

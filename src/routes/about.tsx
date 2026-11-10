@@ -8,20 +8,19 @@ import { CONTACT_EMAIL, MAILTO_CONTACT } from "@/lib/utils";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Me" },
+      { title: "About Swastik Patel — Marketing for AI Companies" },
       {
         name: "description",
         content:
-          "Meet Swastik Patel: LinkedIn content marketer, founder storyteller, social media manager, and performance marketer based in Lucknow, India.",
+          "Meet Swastik Patel, a digital marketer in Lucknow, India, turning complex AI products into clear, well-designed content people actually read.",
       },
       {
         property: "og:title",
-        content: "About Swastik Patel — Content Marketer & Storyteller",
+        content: "About Swastik Patel — Marketing for AI Companies",
       },
       {
         property: "og:description",
-        content:
-          "The person behind the LinkedIn posts you didn’t realise you were enjoying.",
+        content: "The marketer who makes AI make sense.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -35,15 +34,16 @@ function AboutPage() {
     <main className="about-page">
       <section className="about-intro">
         <div className="mx-auto max-w-7xl px-5 pb-14 pt-14 sm:px-8 sm:pb-20 sm:pt-20">
-          <Eyebrow>A bit about the person behind the posts</Eyebrow>
+          <Eyebrow>A bit about the person who makes AI make sense</Eyebrow>
           <h1 className="about-title mt-5 font-display">
             Hey, it’s me.
             <br />
             <em>Swastik.</em>
           </h1>
           <p className="about-deck">
-            I’m the person behind the LinkedIn posts you didn’t realise you were
-            enjoying.
+            I’m a digital marketer who gets a little too excited about
+            explaining complicated things simply, especially when the
+            complicated thing is AI.
           </p>
         </div>
       </section>
@@ -53,73 +53,62 @@ function AboutPage() {
           <div className="about-side-note">
             <Eyebrow>What I bring</Eyebrow>
             <p>
-              Clear stories, consistent content, and a little healthy curiosity
+              Clear writing, good design instincts, and a healthy curiosity
               about the numbers.
             </p>
           </div>
           <div className="about-copy">
             <article className="about-block">
-              <h2>What I actually do</h2>
+              <h2>Why AI companies</h2>
               <p>
-                LinkedIn is my main gig. Founders usually know a lot more than
-                they post, so I take the stories and lessons they’ve been
-                meaning to share and turn them into posts that sound like them,
-                not like a press release. Nobody’s thrilled to announce
-                anything.
+                AI products are some of the most impressive things being built
+                right now, and some of the hardest to explain. Too many launch
+                posts read like a research paper wearing a blazer. Founders know
+                exactly what they’ve built, but the people who’d love it can’t
+                tell what it does or why it matters.
+              </p>
+              <p>
+                That gap is what I like working on. I take what the team knows
+                and turn it into content people actually understand, remember,
+                and talk about.
               </p>
             </article>
+
             <article className="about-block">
-              <h2>The side quests</h2>
-              <p>
-                LinkedIn is the main character, but I also play a few supporting
-                roles:
-              </p>
+              <h2>What I actually do</h2>
+              <p>Content is my main gig. For AI companies, that looks like:</p>
               <ul className="side-quests">
                 <li>
-                  <strong>Social media management</strong>
+                  <strong>LinkedIn content for founders and teams</strong>
                   <span>
-                    I keep your pages alive, consistent, and not weirdly silent
-                    for three weeks.
+                    I turn what AI CEOs know into posts that sound like them, not
+                    like a press release or a product changelog.
                   </span>
                 </li>
                 <li>
                   <strong>Content writing</strong>
                   <span>
-                    Posts, captions, and copy that say something instead of just
-                    filling space.
+                    Posts, captions, launch copy, and explainers that say
+                    something instead of filling space.
+                  </span>
+                </li>
+                <li>
+                  <strong>Social media management</strong>
+                  <span>
+                    Your pages stay consistent, clear, and not weirdly silent
+                    for three weeks after a launch.
                   </span>
                 </li>
               </ul>
             </article>
-            <article className="about-block">
-              <h2>Now, performance marketing</h2>
-              <p>
-                I know. The name sounds like a spreadsheet in a suit.
-                <br />
-                Here’s the real version: performance marketing is just finding
-                out what people actually respond to, then doing more of that.
-                Every ad is a tiny experiment. Every number is a customer saying
-                “yes, this” or “no, please stop.” I like it because it’s the one
-                part of marketing where the audience gives you honest feedback,
-                and nobody is polite about it.
-              </p>
-              <p>
-                It also keeps my creative side honest. A post can feel
-                brilliant, but the data decides if it actually worked.
-              </p>
-            </article>
-            <article className="about-block">
-              <h2>Why this combo works</h2>
-              <p>
-                Good content gets attention. Good data tells you what to do with
-                it. I like having both in one brain.
-              </p>
-            </article>
+
             <article className="about-block about-open">
-              <h2>
-                Currently open to partnering with founders and ambitious teams.
-              </h2>
-              <p>
+              <h2>Currently open to</h2>
+              <p className="font-medium text-foreground">
+                Marketing roles and internships at AI companies, and to working
+                with AI founders and teams on content.
+              </p>
+              <p className="mt-3">
                 Email me at <a href={MAILTO_CONTACT}>{CONTACT_EMAIL}</a> if
                 you’d like to chat or you want to offer me a role in your
                 company.
@@ -151,7 +140,7 @@ function AboutPage() {
               <span>July 2026 — Present</span>
               <p>
                 LinkedIn content strategy, founder storytelling, personal
-                branding, planning, and scheduling.
+                branding, planning, and scheduling. Now focused on AI companies.
               </p>
             </article>
             <article className="experience-row">

@@ -10,20 +10,20 @@ import { MAILTO_CONTACT, NOTION_FORM_URL } from "@/lib/utils";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Swastik Patel" },
+      { title: "Swastik Patel — Marketing for AI Companies" },
       {
         name: "description",
         content:
-          "I turn founders’ brain dumps into LinkedIn posts people actually read. Meet Swastik Patel, a content marketer in Lucknow, India.",
+          "I make AI products sound like they were built for humans. Meet Swastik Patel, marketing for AI companies from Lucknow, India.",
       },
       {
         property: "og:title",
-        content: "Swastik Patel — LinkedIn Content & Storytelling",
+        content: "Swastik Patel — Marketing for AI Companies",
       },
       {
         property: "og:description",
         content:
-          "Founder-led LinkedIn content, thoughtful social strategy, and stories worth reading.",
+          "I make AI products sound like they were built for humans. Marketing for AI companies, founder-led content, and stories worth reading.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -66,11 +66,11 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-5 pb-16 pt-14 sm:px-8 sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-24">
           <div className="max-w-5xl">
             <Eyebrow>
-              LinkedIn content · Founder storytelling · Lucknow, India
+              Marketing for AI companies · Founder storytelling · Lucknow, India
             </Eyebrow>
             <h1 className="hero-title mt-6 font-display text-foreground">
-              I turn founders’ brain dumps into LinkedIn posts people{" "}
-              <em>actually read.</em>
+              I make AI products sound like they were{" "}
+              <em>built for humans.</em>
             </h1>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <a

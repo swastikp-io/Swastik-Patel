@@ -1,556 +1,355 @@
-import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
-import {
-  ArrowUpRight,
-  Layers,
-  BarChart3,
-  Compass,
-  Users,
-  X,
-} from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { SignalDot } from "@/components/site/SignalDot";
+import { CaseStudyDialog } from "@/components/site/CaseStudyDialog";
+import { ApproachSteps } from "@/components/site/ApproachSteps";
+import { CONTACT_FORM_URL, EMAIL_URL } from "@/components/site/links";
+import timaraaArt from "@/assets/timaraa-lineart.jpg";
+import aiBuildersArt from "@/assets/ai-builders-lineart.jpg";
 
-import { WireframeWave } from "@/components/graphics/wireframe-wave";
-import { WireframeSphere } from "@/components/graphics/wireframe-sphere";
-import { SteppedFrame } from "@/components/graphics/stepped-frame";
-import { DottedGrid } from "@/components/graphics/dotted-grid";
-import { GeometricMotif } from "@/components/graphics/geometric-motif";
-import { MAILTO_CONTACT, NOTION_FORM_URL } from "@/lib/utils";
-
-import craftDetail from "@/assets/timaraa-craft-detail.jpg";
-import brandVoice from "@/assets/timaraa-brand-voice.jpg";
-import stylingEditorial from "@/assets/timaraa-styling-editorial.jpg";
+const TITLE = "Swastik Patel — Marketing for AI Companies";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Swastik Patel — Marketing for AI Companies" },
+      { title: TITLE },
       {
         name: "description",
         content:
           "I make AI products sound like they were built for humans. Founder storytelling, content strategy and distribution that turns complex technology into something people understand.",
       },
-      {
-        property: "og:title",
-        content: "Swastik Patel — Marketing for AI Companies",
-      },
+      { property: "og:title", content: TITLE },
       {
         property: "og:description",
         content:
           "I make AI products sound like they were built for humans. Marketing for AI companies, founder-led content, and stories worth reading.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
-  component: HomePage,
+  component: Index,
 });
 
-function HomePage() {
-  const [selectedProject, setSelectedProject] = useState<"timaraa" | "ai" | null>(null);
+const CAPABILITIES = [
+  "Founder-led content & storytelling",
+  "Content strategy & distribution",
+  "Product positioning & messaging",
+  "Social media & organic growth",
+];
 
+function Index() {
   return (
-    <main className="w-full bg-[#111111] text-[#F2F0ED]">
-      {/* SECTION 02 — Hero */}
-      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 pt-12 pb-14 sm:pt-16 sm:pb-20">
-        <div className="max-w-3xl">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.2em] text-[#F2F0ED]">
-            <span className="inline-block w-2 h-2 bg-[#FF1028]" />
-            <span>MARKETING FOR AI COMPANIES</span>
-          </div>
+    <>
+      <Hero />
+      <StatusBar />
+      <Work />
+      <Approach />
+      <Closing />
+    </>
+  );
+}
 
-          {/* Main Headline */}
-          <h1 className="font-serif text-[3.2rem] sm:text-[4.4rem] lg:text-[5.4rem] leading-[0.93] tracking-tight text-[#F2F0ED] mt-6">
-            I make AI products
-            <br />
-            sound like they were
-            <br />
-            built for humans.
-          </h1>
-
-          {/* Supporting Copy */}
-          <p className="font-sans text-base sm:text-lg leading-relaxed text-[#777777] max-w-lg mt-6">
-            Founder storytelling, content strategy and distribution that turns
-            complex technology into something people understand.
+function Hero() {
+  return (
+    <section className="grid-lines relative overflow-hidden">
+      <div className="container-site pb-20 pt-20 md:pb-28 md:pt-32">
+        <p className="eyebrow flex animate-rise items-center gap-3 text-muted-foreground">
+          <SignalDot /> Marketing for AI companies
+        </p>
+        <h1 className="display mt-8 max-w-5xl animate-rise text-[2.9rem] [animation-delay:80ms] sm:text-6xl md:text-7xl lg:text-[6.4rem]">
+          I make AI products <br className="hidden md:block" />
+          sound like they were <br className="hidden md:block" />
+          <span className="text-dim">built for humans.</span>
+        </h1>
+        <div className="mt-12 flex animate-rise flex-col gap-8 [animation-delay:160ms] md:flex-row md:items-end md:justify-between">
+          <p className="max-w-md text-lg leading-relaxed text-muted-foreground">
+            Founder storytelling, content strategy and distribution that turns complex technology
+            into something people understand.
           </p>
-
-          {/* CTA Button */}
-          <div className="mt-8">
-            <a
-              href="#work"
-              className="inline-flex items-center gap-2 bg-[#F2F0ED] text-[#111111] hover:bg-[#FF1028] hover:text-[#FFFFFF] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3 transition-colors"
-            >
-              VIEW WORK <ArrowUpRight className="size-3.5" />
-            </a>
-          </div>
+          <Button asChild variant="signal" size="xl" className="self-start md:self-auto">
+            <Link to="/" hash="work">
+              View work <ArrowUpRight />
+            </Link>
+          </Button>
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      {/* SECTION 03 — Information Bar */}
-      <section className="w-full border-y border-[#262626] bg-[#111111]">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-10 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#F2F0ED]">
-          <div className="flex items-center gap-2.5">
-            <span className="size-1.5 rounded-full bg-[#FF1028] animate-pulse" />
-            <span>INDEPENDENT MARKETER — INDIA</span>
+function StatusBar() {
+  return (
+    <div className="border-y border-border">
+      <div className="container-site flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="eyebrow flex items-center gap-3 text-foreground">
+          <SignalDot live /> Independent marketer — India
+        </p>
+        <a
+          href={CONTACT_FORM_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="eyebrow inline-flex items-center gap-1.5 text-primary transition-colors hover:text-foreground"
+        >
+          Open to AI marketing opportunities <ArrowUpRight className="size-3.5" />
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function CardCta({ children }: { children: ReactNode }) {
+  return (
+    <span className="eyebrow inline-flex items-center gap-1.5 text-primary transition-colors group-hover:text-foreground">
+      {children} <ArrowUpRight className="size-3.5" />
+    </span>
+  );
+}
+
+function Work() {
+  return (
+    <section id="work" className="scroll-mt-16 bg-primary py-16 md:py-24">
+      <div className="container-site">
+        <div className="grid gap-4 lg:grid-cols-3">
+          {/* Project 01 */}
+          <CaseStudyDialog
+            eyebrow="Featured work / 01"
+            title="Timaraa — Social Editorial Concept"
+            description="A self-initiated social-media editorial direction for Timaraa, a handcrafted luxury label. Built around three repeatable pillars: craft & detail, brand voice, and styling & editorial. (Independent concept, not commissioned)."
+            listTitle="Editorial pillars"
+            items={[
+              {
+                label: "01 · Craft & Detail",
+                text: "Close-up inspection letting the embroidery and craftsmanship lead.",
+              },
+              {
+                label: "02 · Brand Voice",
+                text: "Conversational, repeatable dialogue establishing the label's point of view.",
+              },
+              {
+                label: "03 · Styling & Occasion",
+                text: "Hero detail paired with everyday styling applications in a single editorial frame.",
+              },
+            ]}
+            image={timaraaArt}
+            ctaLabel="Start a project"
+            ctaHref={CONTACT_FORM_URL}
+            trigger={
+              <button
+                type="button"
+                className="group flex flex-col bg-background text-left transition-transform hover:-translate-y-1 lg:col-span-2"
+              >
+                <div className="flex items-start justify-between p-7 md:p-9">
+                  <div>
+                    <p className="eyebrow text-muted-foreground">Featured work / 01</p>
+                    <h2 className="display mt-5 text-5xl md:text-6xl">Timaraa.</h2>
+                  </div>
+                  <span className="eyebrow text-dim">01</span>
+                </div>
+                <img
+                  src={timaraaArt}
+                  alt="Line drawing of an embroidered couture gown on a dress form, with a needle and thread turning into music"
+                  width={1280}
+                  height={1024}
+                  loading="lazy"
+                  className="aspect-[16/8] w-full object-cover opacity-90 transition-opacity group-hover:opacity-100"
+                />
+                <div className="flex flex-col gap-5 p-7 md:flex-row md:items-end md:justify-between md:p-9">
+                  <p className="max-w-md leading-relaxed text-muted-foreground">
+                    A creative concept exploring storytelling, brand and community around music and
+                    handcrafted couture.
+                  </p>
+                  <CardCta>View project</CardCta>
+                </div>
+              </button>
+            }
+          />
+
+          {/* What I do */}
+          <div className="flex flex-col justify-between bg-ivory p-7 text-ivory-foreground md:p-9">
+            <div>
+              <div className="flex items-start justify-between">
+                <p className="eyebrow text-ivory-muted">What I do</p>
+                <span className="eyebrow text-ivory-muted">02</span>
+              </div>
+              <h2 className="display mt-5 text-4xl md:text-[2.7rem]">
+                Marketing that makes complex products click.
+              </h2>
+            </div>
+            <ul className="mt-12 border-t border-ivory-border">
+              {CAPABILITIES.map((c, i) => (
+                <li
+                  key={c}
+                  className="eyebrow flex items-center gap-4 border-b border-ivory-border py-4"
+                >
+                  <span className="text-primary">0{i + 1}</span>
+                  {c}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <a
-            href={NOTION_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[#777777] hover:text-[#F2F0ED] transition-colors"
-          >
-            <span>OPEN TO AI MARKETING OPPORTUNITIES</span>
-            <ArrowUpRight className="size-3.5" />
-          </a>
-        </div>
-      </section>
-
-      {/* SECTION 04 — Selected Work & Capability Grid */}
-      <section id="work" className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20">
-        <div className="border border-[#262626] bg-[#202020]">
-          {/* ROW 1: Project 01 (Timaraa) + What I Do */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-[#262626]">
-            {/* Project 01: Timaraa (7 cols) */}
-            <div className="lg:col-span-7 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-[#262626] flex flex-col justify-between">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
-                  FEATURED WORK / 01
-                </p>
-
-                <div className="mt-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                  <div className="md:col-span-6">
-                    <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F2F0ED] tracking-tight">
-                      Timaraa.
-                    </h2>
-                    <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
-                      A creative concept exploring storytelling, brand and
-                      community around music and handcrafted couture.
-                    </p>
-
-                    <button
-                      onClick={() => setSelectedProject("timaraa")}
-                      className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[#F2F0ED] hover:text-[#777777] transition-colors cursor-pointer"
-                    >
-                      VIEW PROJECT <ArrowUpRight className="size-3.5" />
-                    </button>
-                  </div>
-
-                  <div className="md:col-span-6">
-                    <SteppedFrame variant="project1">
-                      <WireframeWave density={0.9} speed={0.8} />
-                    </SteppedFrame>
-                  </div>
-                </div>
-              </div>
+          {/* Stat */}
+          <div className="flex flex-col justify-between bg-background p-7 md:p-9">
+            <div className="flex items-start justify-between">
+              <p className="eyebrow text-muted-foreground">By the numbers</p>
+              <span className="eyebrow text-dim">03</span>
             </div>
-
-            {/* What I Do (5 cols) */}
-            <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
-                  WHAT I DO
-                </p>
-                <h2 className="font-serif text-2xl sm:text-3xl text-[#F2F0ED] mt-3 leading-snug">
-                  Marketing that makes complex products click.
-                </h2>
-              </div>
-
-              <div className="mt-6 space-y-0 divide-y divide-[#262626] border-t border-[#262626]">
-                {/* Capability 1 */}
-                <div className="py-3 flex items-center justify-between gap-3 group">
-                  <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
-                      <Layers className="size-3.5" />
-                    </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
-                      FOUNDER-LED CONTENT & STORYTELLING
-                    </span>
-                  </div>
-                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
-                </div>
-
-                {/* Capability 2 */}
-                <div className="py-3 flex items-center justify-between gap-3 group">
-                  <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
-                      <BarChart3 className="size-3.5" />
-                    </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
-                      CONTENT STRATEGY & DISTRIBUTION
-                    </span>
-                  </div>
-                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
-                </div>
-
-                {/* Capability 3 */}
-                <div className="py-3 flex items-center justify-between gap-3 group">
-                  <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
-                      <Compass className="size-3.5" />
-                    </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
-                      PRODUCT POSITIONING & MESSAGING
-                    </span>
-                  </div>
-                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
-                </div>
-
-                {/* Capability 4 */}
-                <div className="py-3 flex items-center justify-between gap-3 group">
-                  <div className="flex items-center gap-3">
-                    <div className="size-7 bg-[#202020] flex items-center justify-center text-[#F2F0ED]">
-                      <Users className="size-3.5" />
-                    </div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#F2F0ED]">
-                      SOCIAL MEDIA & ORGANIC GROWTH
-                    </span>
-                  </div>
-                  <ArrowUpRight className="size-3.5 text-[#777777] group-hover:text-[#F2F0ED] transition-colors" />
-                </div>
-              </div>
+            <div className="mt-16">
+              <p className="display text-[7rem] leading-none md:text-[9rem]">
+                80<span className="text-primary">+</span>
+              </p>
+              <p className="mt-6 max-w-xs leading-relaxed text-muted-foreground">
+                Pieces of content shipped across projects, experiments and personal brands.
+              </p>
             </div>
           </div>
 
-          {/* ROW 2: Project 02 (Content for AI builders) + Statistics (80+) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12">
-            {/* Project 02 (7 cols) */}
-            <div className="lg:col-span-7 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-[#262626] flex flex-col justify-between">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
-                  SELECTED WORK / 02
-                </p>
-
-                <div className="mt-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                  <div className="md:col-span-6">
-                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2F0ED] tracking-tight">
-                      Content for
-                      <br />
+          {/* Project 02 */}
+          <CaseStudyDialog
+            eyebrow="Selected work / 02"
+            title="Content for AI Builders"
+            description="A framework for early-stage AI founders to extract their internal technical notes, pull requests, and product architectures, turning them into high-signal LinkedIn storytelling and launch content."
+            listTitle="System breakdown"
+            items={[
+              {
+                label: "Stage 01",
+                text: "Extraction session (founder brain dumps into structured audio).",
+              },
+              {
+                label: "Stage 02",
+                text: "Translation (research jargon decoded into human problems & outcomes).",
+              },
+              {
+                label: "Stage 03",
+                text: "Multi-channel distribution across LinkedIn, founder accounts, and developer communities.",
+              },
+            ]}
+            image={aiBuildersArt}
+            ctaLabel="Discuss this approach"
+            ctaHref={EMAIL_URL}
+            external={false}
+            trigger={
+              <button
+                type="button"
+                className="group grid bg-background text-left transition-transform hover:-translate-y-1 md:grid-cols-2 lg:col-span-2"
+              >
+                <div className="flex flex-col justify-between p-7 md:p-9">
+                  <div className="flex items-start justify-between">
+                    <p className="eyebrow text-muted-foreground">Selected work / 02</p>
+                    <span className="eyebrow text-dim md:hidden">04</span>
+                  </div>
+                  <div className="mt-12">
+                    <h2 className="display text-5xl md:text-[3.4rem]">
+                      Content for <br />
                       AI builders.
                     </h2>
-                    <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
-                      A content system and distribution approach for early-stage
-                      AI products, translating code and research into customer
-                      attention.
+                    <p className="mt-6 max-w-sm leading-relaxed text-muted-foreground">
+                      A content system and distribution approach for early-stage AI products,
+                      translating code and research into customer attention.
                     </p>
-
-                    <button
-                      onClick={() => setSelectedProject("ai")}
-                      className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[#F2F0ED] hover:text-[#777777] transition-colors cursor-pointer"
-                    >
-                      CASE STUDY <ArrowUpRight className="size-3.5" />
-                    </button>
-                  </div>
-
-                  <div className="md:col-span-6">
-                    <SteppedFrame variant="project2">
-                      <WireframeSphere speed={0.9} />
-                    </SteppedFrame>
+                    <div className="mt-8">
+                      <CardCta>Case study</CardCta>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+                <div className="relative border-t border-border md:border-l md:border-t-0">
+                  <span className="eyebrow absolute right-7 top-7 hidden text-dim md:block">
+                    04
+                  </span>
+                  <img
+                    src={aiBuildersArt}
+                    alt="Line drawing of a laptop sending code into documents, a globe and people"
+                    width={1280}
+                    height={1024}
+                    loading="lazy"
+                    className="h-full min-h-64 w-full object-cover opacity-90 transition-opacity group-hover:opacity-100"
+                  />
+                </div>
+              </button>
+            }
+          />
+        </div>
 
-            {/* Statistics / Credibility (5 cols) */}
-            <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between relative">
-              {/* Dotted Matrix top right */}
-              <div className="absolute top-8 right-8 hidden sm:block">
-                <DottedGrid rows={6} cols={9} gap={10} dotColor="#202020" />
-              </div>
+        <div className="mt-4 flex items-center justify-between bg-background px-7 py-6 md:px-9">
+          <p className="display text-2xl md:text-4xl">
+            Strategy. <span className="text-dim">Content.</span>{" "}
+            <span className="text-primary">Systems.</span>
+          </p>
+          <span className="eyebrow hidden text-dim sm:block">Swastik Patel</span>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-              <div>
-                <span className="font-serif text-6xl sm:text-7xl lg:text-8xl leading-none text-[#F2F0ED] block">
-                  80+
-                </span>
-                <p className="font-sans text-sm text-[#777777] mt-4 max-w-xs leading-relaxed">
-                  Pieces of content shipped across projects, experiments and
-                  personal brands.
-                </p>
-              </div>
-
-              <div className="mt-10 border-t border-[#262626] pt-4">
-                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#777777]">
-                  STRATEGY. CONTENT. SYSTEMS.
-                </p>
-              </div>
-            </div>
+function Approach() {
+  return (
+    <section id="approach" className="scroll-mt-16 border-b border-border py-20 md:py-28">
+      <div className="container-site">
+        <div className="mb-14 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="eyebrow flex items-center gap-3 text-muted-foreground">
+              <SignalDot /> My approach
+            </p>
+            <h2 className="display mt-6 max-w-2xl text-5xl md:text-7xl">
+              From understanding <span className="text-dim">to distribution.</span>
+            </h2>
           </div>
         </div>
-      </section>
+        <ApproachSteps />
+      </div>
+    </section>
+  );
+}
 
-      {/* SECTION 05 — My Approach */}
-      <section id="approach" className="mx-auto max-w-[1240px] px-6 sm:px-10 pb-16 sm:pb-20">
-        <div className="border border-[#262626] p-6 sm:p-10 bg-[#202020]">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-            {/* Left Column: Heading + Geometric Motif */}
-            <div className="lg:col-span-5 flex flex-col justify-between">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
-                  MY APPROACH
-                </p>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2F0ED] mt-3 leading-tight max-w-sm">
-                  From understanding to distribution.
-                </h2>
-              </div>
-
-              <div className="mt-8">
-                <GeometricMotif />
-              </div>
-            </div>
-
-            {/* Right Column: 4 Stages */}
-            <div className="lg:col-span-7 divide-y divide-[#262626] border-t lg:border-t-0 border-[#262626]">
-              {/* Stage 01 */}
-              <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
-                  01
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
-                    Understand
-                  </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
-                    RESEARCH THE PRODUCT, AUDIENCE AND MARKET.
-                  </p>
-                </div>
-              </div>
-
-              {/* Stage 02 */}
-              <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
-                  02
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
-                    Position
-                  </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
-                    TURN TECHNICAL COMPLEXITY INTO CLEAR, COMPELLING MESSAGING.
-                  </p>
-                </div>
-              </div>
-
-              {/* Stage 03 */}
-              <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
-                  03
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
-                    Create
-                  </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
-                    DEVELOP CONTENT THAT SOUNDS HUMAN, NOT JUST TECHNICAL.
-                  </p>
-                </div>
-              </div>
-
-              {/* Stage 04 */}
-              <div className="py-4 sm:py-5 flex items-start justify-between gap-4 group">
-                <span className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] w-12 shrink-0">
-                  04
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F2F0ED]">
-                    Distribute
-                  </h3>
-                  <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#777777] mt-1">
-                    BUILD CONSISTENT, COMPOUNDING VISIBILITY ACROSS THE RIGHT
-                    CHANNELS.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 06 — About & Closing Contact */}
-      <section id="about" className="mx-auto max-w-[1240px] px-6 sm:px-10 pb-20 sm:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left: About Card (Inverted Ivory Panel) */}
-          <div className="lg:col-span-5 bg-[#F2F0ED] text-[#111111] p-8 sm:p-10 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 border border-[#111111]/40 text-[#111111]">
-                  ABOUT
-                </span>
-                <a
-                  href="/about"
-                  className="text-[#111111] hover:opacity-60 transition-opacity"
-                  aria-label="Read full about page"
-                >
-                  <ArrowUpRight className="size-4" />
-                </a>
-              </div>
-
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#111111] mt-8 leading-snug">
-                Curious about technology, interested in how people understand
-                it.
-              </h2>
-
-              <p className="font-sans text-sm text-[#777777] mt-5 leading-relaxed">
-                An independent marketer exploring the intersection of content,
-                technology and AI. Based in India, working with ambitious teams
-                building the future.
-              </p>
-            </div>
-
-            <div className="mt-10 flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-widest text-[#111111]">
-              <span className="inline-block w-2 h-2 bg-[#FF1028]" />
-              <span>OPEN TO AI MARKETING OPPORTUNITIES</span>
-            </div>
-          </div>
-
-          {/* Right: Closing Contact Section */}
-          <div className="lg:col-span-7 border border-[#262626] bg-[#202020] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
-            <div>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-[#777777]">
-                HAVE AN AI PRODUCT THAT'S HARD TO EXPLAIN?
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2F0ED] mt-4 leading-tight max-w-md">
-                Let’s make people understand why it matters.
-              </h2>
-
-              <div className="mt-8">
-                <a
-                  href={NOTION_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#F2F0ED] text-[#111111] font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3.5 hover:bg-[#FF1028] hover:text-[#FFFFFF] transition-colors"
-                >
-                  START A CONVERSATION <ArrowUpRight className="size-3.5" />
-                </a>
-              </div>
-            </div>
-
-            {/* Stepped Wireframe Wave Graphic at bottom right */}
-            <div className="mt-10 sm:mt-12 flex justify-end">
-              <div className="w-full sm:w-[320px]">
-                <SteppedFrame variant="contact">
-                  <WireframeWave density={0.8} speed={0.9} />
-                </SteppedFrame>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Modal: Preserves full visual case study samples */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto">
-          <div className="relative w-full max-w-3xl bg-[#202020] border border-[#262626] text-[#F2F0ED] p-6 sm:p-10 max-h-[90vh] overflow-y-auto">
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-6 right-6 p-2 text-[#F2F0ED] hover:text-[#777777] transition-colors"
-              aria-label="Close modal"
+function Closing() {
+  return (
+    <section className="py-16 md:py-24">
+      <div className="container-site grid gap-4 lg:grid-cols-2">
+        <div className="flex flex-col justify-between bg-ivory p-7 text-ivory-foreground md:p-10">
+          <div className="flex items-center justify-between">
+            <span className="eyebrow border border-ivory-foreground px-3 py-1.5">About</span>
+            <Link
+              to="/about"
+              aria-label="Read more about Swastik"
+              className="flex size-11 items-center justify-center bg-ivory-foreground text-ivory transition-colors hover:bg-primary hover:text-primary-foreground"
             >
-              <X className="size-5" />
-            </button>
-
-            {selectedProject === "timaraa" ? (
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
-                  FEATURED WORK / 01
-                </p>
-                <h2 className="font-serif text-4xl text-[#F2F0ED] mt-2">
-                  Timaraa — Social Editorial Concept
-                </h2>
-                <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
-                  A self-initiated social-media editorial direction for
-                  Timaraa, a handcrafted luxury label. Built around three
-                  repeatable pillars: craft & detail, brand voice, and styling &
-                  editorial. (Independent concept, not commissioned).
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                  <div className="border border-[#262626] p-2 bg-[#202020]">
-                    <img
-                      src={craftDetail}
-                      alt="Craft and detail close-up"
-                      className="w-full aspect-[4/5] object-cover"
-                    />
-                    <p className="font-mono text-[10px] uppercase mt-2 text-[#777777]">
-                      01 · Craft & Detail
-                    </p>
-                  </div>
-                  <div className="border border-[#262626] p-2 bg-[#202020]">
-                    <img
-                      src={brandVoice}
-                      alt="Brand voice conversational post"
-                      className="w-full aspect-[4/5] object-cover"
-                    />
-                    <p className="font-mono text-[10px] uppercase mt-2 text-[#777777]">
-                      02 · Brand Voice
-                    </p>
-                  </div>
-                  <div className="border border-[#262626] p-2 bg-[#202020]">
-                    <img
-                      src={stylingEditorial}
-                      alt="Styling and occasion editorial"
-                      className="w-full aspect-[4/5] object-cover"
-                    />
-                    <p className="font-mono text-[10px] uppercase mt-2 text-[#777777]">
-                      03 · Styling & Occasion
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-8 flex justify-end">
-                  <a
-                    href={NOTION_FORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-[#F2F0ED] text-[#111111] font-mono text-xs font-semibold uppercase px-4 py-2 hover:bg-[#FF1028] hover:text-[#FFFFFF]"
-                  >
-                    Start a project <ArrowUpRight className="size-3.5" />
-                  </a>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[#777777]">
-                  SELECTED WORK / 02
-                </p>
-                <h2 className="font-serif text-4xl text-[#F2F0ED] mt-2">
-                  Content for AI Builders
-                </h2>
-                <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
-                  A framework for early-stage AI founders to extract their
-                  internal technical notes, pull requests, and product
-                  architectures, turning them into high-signal LinkedIn
-                  storytelling and launch content.
-                </p>
-
-                <div className="border border-[#262626] p-6 mt-6 bg-[#202020] space-y-4 font-mono text-xs text-[#F2F0ED]">
-                  <div>
-                    <span className="text-[#777777]">STAGE 01:</span> Extraction
-                    session (founder brain dumps into structured audio).
-                  </div>
-                  <div>
-                    <span className="text-[#777777]">STAGE 02:</span> Translation
-                    (research jargon decoded into human problems & outcomes).
-                  </div>
-                  <div>
-                    <span className="text-[#777777]">STAGE 03:</span> Multi-channel
-                    distribution across LinkedIn, founder accounts, and developer
-                    communities.
-                  </div>
-                </div>
-
-                <div className="mt-8 flex justify-end">
-                  <a
-                    href={MAILTO_CONTACT}
-                    className="inline-flex items-center gap-1.5 bg-[#F2F0ED] text-[#111111] font-mono text-xs font-semibold uppercase px-4 py-2 hover:bg-[#FF1028] hover:text-[#FFFFFF]"
-                  >
-                    Discuss this approach <ArrowUpRight className="size-3.5" />
-                  </a>
-                </div>
-              </div>
-            )}
+              <ArrowUpRight className="size-5" />
+            </Link>
+          </div>
+          <div className="mt-20">
+            <h2 className="display text-4xl md:text-5xl">
+              Curious about technology, interested in how people understand it.
+            </h2>
+            <p className="mt-6 max-w-lg leading-relaxed text-ivory-muted">
+              An independent marketer exploring the intersection of content, technology and AI.
+              Based in India, working with ambitious teams building the future.
+            </p>
+            <p className="eyebrow mt-10 flex items-center gap-3">
+              <SignalDot /> Open to AI marketing opportunities
+            </p>
           </div>
         </div>
-      )}
-    </main>
+
+        <div className="grid-lines flex flex-col justify-between border border-border p-7 md:p-10">
+          <p className="eyebrow text-primary">Have an AI product that's hard to explain?</p>
+          <div className="mt-20">
+            <h2 className="display text-5xl md:text-6xl">
+              Let’s make people understand <span className="text-dim">why it matters.</span>
+            </h2>
+            <Button asChild variant="signal" size="xl" className="mt-10">
+              <a href={CONTACT_FORM_URL} target="_blank" rel="noreferrer">
+                Start a conversation <ArrowUpRight />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

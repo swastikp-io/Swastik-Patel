@@ -1,233 +1,193 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { SignalDot } from "@/components/site/SignalDot";
+import { EMAIL, EMAIL_URL } from "@/components/site/links";
 
-import { WireframeWave } from "@/components/graphics/wireframe-wave";
-import { SteppedFrame } from "@/components/graphics/stepped-frame";
-import { CONTACT_EMAIL, MAILTO_CONTACT } from "@/lib/utils";
+const TITLE = "About Swastik Patel — Marketing for AI Companies";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Swastik Patel — Marketing for AI Companies" },
+      { title: TITLE },
       {
         name: "description",
         content:
           "Meet Swastik Patel, a digital marketer in Lucknow, India, turning complex AI products into clear, well-designed content people actually read.",
       },
-      {
-        property: "og:title",
-        content: "About Swastik Patel — Marketing for AI Companies",
-      },
-      {
-        property: "og:description",
-        content: "The marketer who makes AI make sense.",
-      },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: "The marketer who makes AI make sense." },
       { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/about" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: AboutPage,
 });
 
+const OFFERS = [
+  {
+    title: "LinkedIn content for founders and teams",
+    text: "I turn what AI CEOs know into posts that sound like them, not like a press release or a product changelog.",
+  },
+  {
+    title: "Content writing",
+    text: "Posts, captions, launch copy, and explainers that say something instead of filling space.",
+  },
+  {
+    title: "Social media management",
+    text: "Your pages stay consistent, clear, and not weirdly silent for three weeks after a launch.",
+  },
+];
+
+const EXPERIENCE = [
+  {
+    when: "July 2026 — Present",
+    role: "Content Writer",
+    org: "Freelance",
+    text: "LinkedIn content strategy, founder storytelling, personal branding, planning, and scheduling. Now focused on AI companies.",
+  },
+  {
+    when: "March 2026 — June 2026",
+    role: "Digital Marketing Intern",
+    org: "Hindtech IT Solutions",
+    text: "Social media strategy and operations across platforms, content planning, publishing, and lead generation.",
+  },
+  {
+    when: "Expected July 2027",
+    role: "Bachelor of Computer Application, Computer Science",
+    org: "Shri Ramswaroop Memorial University",
+    text: "",
+  },
+];
+
 function AboutPage() {
   return (
-    <main className="w-full bg-[#111111] text-[#F2F0ED]">
-      {/* Intro Header */}
-      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 pt-14 pb-12 sm:pt-20 sm:pb-16 border-b border-[#262626]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#777777]">
-              A BIT ABOUT THE PERSON WHO MAKES AI MAKE SENSE
-            </p>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-[#F2F0ED] mt-6 tracking-tight">
-              Hey, it’s me.
-              <br />
-              Swastik.
-            </h1>
-            <p className="font-sans text-lg sm:text-xl text-[#777777] mt-6 leading-relaxed max-w-2xl">
-              I’m a digital marketer who gets a little too excited about
-              explaining complicated things simply, especially when the
-              complicated thing is AI.
-            </p>
-          </div>
-
-          <div className="lg:col-span-4">
-            <SteppedFrame variant="hero">
-              <WireframeWave density={0.8} speed={0.8} />
-            </SteppedFrame>
-          </div>
+    <>
+      {/* Hero */}
+      <section className="grid-lines border-b border-border">
+        <div className="container-site pb-20 pt-20 md:pb-28 md:pt-32">
+          <p className="eyebrow flex animate-rise items-center gap-3 text-muted-foreground">
+            <SignalDot /> A bit about the person who makes AI make sense
+          </p>
+          <h1 className="display mt-8 animate-rise text-6xl [animation-delay:80ms] md:text-8xl lg:text-[8.5rem]">
+            Hey, it’s me. <br />
+            <span className="text-primary">Swastik.</span>
+          </h1>
+          <p className="mt-10 max-w-2xl animate-rise text-xl leading-relaxed text-muted-foreground [animation-delay:160ms] md:text-2xl">
+            I’m a digital marketer who gets a little too excited about explaining complicated
+            things simply, especially when the complicated thing is AI.
+          </p>
         </div>
       </section>
 
-      {/* Main Copy Section */}
-      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20 border-b border-[#262626]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Side note */}
-          <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#777777]">
-              WHAT I BRING
-            </p>
-            <p className="font-serif text-2xl text-[#F2F0ED] mt-4 leading-snug">
-              Clear writing, good design instincts, and a healthy curiosity about
-              the numbers.
-            </p>
-          </div>
+      {/* What I bring */}
+      <section className="border-b border-border py-20 md:py-28">
+        <div className="container-site grid gap-14 lg:grid-cols-12">
+          <aside className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <p className="eyebrow text-primary">What I bring</p>
+              <p className="display mt-6 text-3xl leading-tight md:text-4xl">
+                Clear writing, good design instincts, and a healthy curiosity about the numbers.
+              </p>
+            </div>
+          </aside>
 
-          {/* Copy Blocks */}
-          <div className="lg:col-span-8 space-y-12">
-            {/* Why AI companies */}
-            <article className="border border-[#262626] p-8 sm:p-10 bg-[#202020]">
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#F2F0ED]">
-                Why AI companies
-              </h2>
-              <p className="font-sans text-base text-[#777777] mt-5 leading-relaxed">
-                AI products are some of the most impressive things being built
-                right now, and some of the hardest to explain. Too many launch
-                posts read like a research paper wearing a blazer. Founders know
-                exactly what they’ve built, but the people who’d love it can’t
-                tell what it does or why it matters.
-              </p>
-              <p className="font-sans text-base text-[#777777] mt-4 leading-relaxed">
-                That gap is what I like working on. I take what the team knows
-                and turn it into content people actually understand, remember,
-                and talk about.
-              </p>
+          <div className="space-y-20 lg:col-span-8">
+            <article>
+              <h2 className="display text-4xl md:text-5xl">Why AI companies</h2>
+              <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
+                <p>
+                  AI products are some of the most impressive things being built right now, and
+                  some of the hardest to explain. Too many launch posts read like a research paper
+                  wearing a blazer. Founders know exactly what they’ve built, but the people who’d
+                  love it can’t tell what it does or why it matters.
+                </p>
+                <p>
+                  That gap is what I like working on. I take what the team knows and turn it into
+                  content people actually understand, remember, and talk about.
+                </p>
+              </div>
             </article>
 
-            {/* What I actually do */}
-            <article className="border border-[#262626] p-8 sm:p-10 bg-[#202020]">
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#F2F0ED]">
-                What I actually do
-              </h2>
-              <p className="font-sans text-base text-[#777777] mt-3">
+            <article>
+              <h2 className="display text-4xl md:text-5xl">What I actually do</h2>
+              <p className="mt-8 text-lg text-muted-foreground">
                 Content is my main gig. For AI companies, that looks like:
               </p>
-
-              <div className="mt-8 space-y-6">
-                <div className="border-l-2 border-[#FF1028] pl-5">
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F2F0ED] font-semibold">
-                    LinkedIn content for founders and teams
-                  </h3>
-                  <p className="font-sans text-sm text-[#777777] mt-1.5 leading-relaxed">
-                    I turn what AI CEOs know into posts that sound like them, not
-                    like a press release or a product changelog.
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-[#FF1028] pl-5">
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F2F0ED] font-semibold">
-                    Content writing
-                  </h3>
-                  <p className="font-sans text-sm text-[#777777] mt-1.5 leading-relaxed">
-                    Posts, captions, launch copy, and explainers that say
-                    something instead of filling space.
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-[#FF1028] pl-5">
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-[#F2F0ED] font-semibold">
-                    Social media management
-                  </h3>
-                  <p className="font-sans text-sm text-[#777777] mt-1.5 leading-relaxed">
-                    Your pages stay consistent, clear, and not weirdly silent for
-                    three weeks after a launch.
-                  </p>
-                </div>
-              </div>
+              <ul className="mt-8 border-t border-border">
+                {OFFERS.map((o, i) => (
+                  <li
+                    key={o.title}
+                    className="grid gap-3 border-b border-border py-7 md:grid-cols-[3rem_1fr]"
+                  >
+                    <span className="eyebrow pt-1.5 text-primary">0{i + 1}</span>
+                    <div>
+                      <h3 className="font-display text-2xl tracking-tight">{o.title}</h3>
+                      <p className="mt-2 leading-relaxed text-muted-foreground">{o.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </article>
 
-            {/* Availability */}
-            <article className="bg-[#F2F0ED] text-[#111111] p-8 sm:p-10 border border-[#F2F0ED]">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-[#777777] flex items-center gap-2">
-                <span className="size-2 rounded-full bg-[#FF1028]" />
-                CURRENTLY OPEN TO
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#111111] mt-3 leading-snug">
-                Marketing roles and internships at AI companies, and to working
-                with AI founders and teams on content.
+            <article className="bg-ivory p-7 text-ivory-foreground md:p-10">
+              <p className="eyebrow flex items-center gap-3">
+                <SignalDot live /> Currently open to
+              </p>
+              <h2 className="display mt-6 text-3xl leading-tight md:text-4xl">
+                Marketing roles and internships at AI companies, and to working with AI founders
+                and teams on content.
               </h2>
-              <p className="font-sans text-sm text-[#777777] mt-4 leading-relaxed">
+              <p className="mt-6 max-w-xl leading-relaxed text-ivory-muted">
                 Email me at{" "}
                 <a
-                  href={MAILTO_CONTACT}
-                  className="text-[#111111] font-semibold underline underline-offset-4 hover:text-[#FF1028] transition-colors"
+                  href={EMAIL_URL}
+                  className="text-ivory-foreground underline decoration-primary decoration-2 underline-offset-4 hover:text-primary"
                 >
-                  {CONTACT_EMAIL}
+                  {EMAIL}
                 </a>{" "}
-                if you’d like to chat or you want to offer me a role in your
-                company.
+                if you’d like to chat or you want to offer me a role in your company.
               </p>
+              <Button asChild variant="ink" size="xl" className="mt-8">
+                <a href={EMAIL_URL}>
+                  Email Swastik <ArrowUpRight />
+                </a>
+              </Button>
             </article>
           </div>
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="mx-auto max-w-[1240px] px-6 sm:px-10 py-16 sm:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#777777]">
-              ON PAPER
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#F2F0ED] mt-3">
-              The experience.
-            </h2>
-          </div>
+      {/* Experience */}
+      <section className="py-20 md:py-28">
+        <div className="container-site">
+          <p className="eyebrow flex items-center gap-3 text-muted-foreground">
+            <SignalDot /> On paper
+          </p>
+          <h2 className="display mt-6 text-5xl md:text-7xl">The experience.</h2>
 
-          <div className="lg:col-span-8 divide-y divide-[#262626] border-t border-b border-[#262626]">
-            <div className="py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-              <div>
-                <h3 className="font-serif text-2xl text-[#F2F0ED]">
-                  Content Writer
-                </h3>
-                <p className="font-mono text-xs text-[#777777] uppercase mt-1">
-                  Freelance
-                </p>
-                <p className="font-sans text-sm text-[#777777] mt-2 max-w-lg leading-relaxed">
-                  LinkedIn content strategy, founder storytelling, personal
-                  branding, planning, and scheduling. Now focused on AI
-                  companies.
-                </p>
-              </div>
-              <span className="font-mono text-xs text-[#777777] uppercase shrink-0">
-                July 2026 — Present
-              </span>
-            </div>
-
-            <div className="py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-              <div>
-                <h3 className="font-serif text-2xl text-[#F2F0ED]">
-                  Digital Marketing Intern
-                </h3>
-                <p className="font-mono text-xs text-[#777777] uppercase mt-1">
-                  Hindtech IT Solutions
-                </p>
-                <p className="font-sans text-sm text-[#777777] mt-2 max-w-lg leading-relaxed">
-                  Social media strategy and operations across platforms, content
-                  planning, publishing, and lead generation.
-                </p>
-              </div>
-              <span className="font-mono text-xs text-[#777777] uppercase shrink-0">
-                March 2026 — June 2026
-              </span>
-            </div>
-
-            <div className="py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-              <div>
-                <h3 className="font-serif text-2xl text-[#F2F0ED]">Education</h3>
-                <p className="font-mono text-xs text-[#777777] uppercase mt-1">
-                  Bachelor of Computer Application, Computer Science
-                </p>
-                <p className="font-sans text-sm text-[#777777] mt-2 max-w-lg leading-relaxed">
-                  Shri Ramswaroop Memorial University
-                </p>
-              </div>
-              <span className="font-mono text-xs text-[#777777] uppercase shrink-0">
-                Expected July 2027
-              </span>
-            </div>
-          </div>
+          <ol className="mt-14 border-t border-border">
+            {EXPERIENCE.map((e, i) => (
+              <li
+                key={e.role}
+                className="group grid gap-4 border-b border-border py-9 transition-colors hover:bg-card md:grid-cols-12 md:gap-8 md:px-4"
+              >
+                <div className="flex items-center gap-4 md:col-span-3">
+                  <span className="eyebrow text-primary">0{i + 1}</span>
+                  <span className="eyebrow text-muted-foreground">{e.when}</span>
+                </div>
+                <div className="md:col-span-4">
+                  <h3 className="font-display text-2xl tracking-tight">{e.role}</h3>
+                  <p className="eyebrow mt-2 text-dim">{e.org}</p>
+                </div>
+                <p className="leading-relaxed text-muted-foreground md:col-span-5">{e.text}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
-    </main>
+    </>
   );
 }
